@@ -93,6 +93,135 @@
   </figure>
 </section>
 
+
+<section class="services-showcase" id="servicios" aria-labelledby="services-title">
+  <div class="services-ambient services-ambient--one" aria-hidden="true"></div>
+  <div class="services-ambient services-ambient--two" aria-hidden="true"></div>
+
+  <header class="services-intro section-pad reveal">
+    <div>
+      <span class="section-number">04 SISTEMAS · UNA CAPA DE INTELIGENCIA</span>
+      <h2 id="services-title">Tecnología que empieza<br>en el mundo <em>real.</em></h2>
+    </div>
+    <div class="services-intro__copy">
+      <p>No partimos de una pantalla. Partimos del lote, el animal, el agua y la operación. Capturamos señales del mundo físico y las convertimos en información útil dentro de DIMITRA.</p>
+      <div class="services-flow" aria-label="Campo, datos, inteligencia y decisiones">
+        <span>CAMPO</span><i></i><span>DATOS</span><i></i><span>INTELIGENCIA</span><i></i><span>DECISIONES</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="service-chapters">
+    <article class="service-chapter service-chapter--agri" data-service="agri">
+      <div class="service-chapter__visual reveal">
+        <img src="{% static 'img/agrotikos-field-installation.jpg' %}" alt="Tecnología AgroTikos instalada directamente en campo" loading="lazy">
+        <div class="service-image-shade" aria-hidden="true"></div>
+        <div class="field-scan" aria-hidden="true"></div>
+        <svg class="service-overlay service-overlay--agri" viewBox="0 0 900 660" aria-hidden="true">
+          <path class="scan-field-line" d="M40 485 C190 415 310 470 425 402 S680 310 865 355"/>
+          <path class="scan-field-line scan-field-line--2" d="M55 535 C205 455 345 520 470 445 S700 360 860 405"/>
+          <circle class="map-ping map-ping--1" cx="265" cy="438" r="8"/>
+          <circle class="map-ping map-ping--2" cx="604" cy="353" r="8"/>
+          <circle class="map-ping map-ping--3" cx="742" cy="392" r="8"/>
+        </svg>
+        <div class="visual-hud visual-hud--top"><span>NDVI</span><strong>0.73</strong><small>escena procesada</small></div>
+        <div class="visual-hud visual-hud--bottom"><span>SUELO</span><strong>34%</strong><small>humedad · lote 04</small></div>
+        <div class="visual-coordinate">04°36'N · LIVE FIELD DATA</div>
+      </div>
+      <div class="service-chapter__copy reveal">
+        <span class="service-index">01 / AGRICULTURA DE PRECISIÓN</span>
+        <h3>Leer el cultivo<br>antes de intervenirlo.</h3>
+        <p>Integramos sensores de suelo y ambiente, estaciones meteorológicas, telemetría e información satelital para construir una lectura continua de cada lote.</p>
+        <div class="service-capabilities">
+          <span>Humedad de suelo</span><span>Clima</span><span>NDVI / teledetección</span><span>Riego</span><span>Alertas</span><span>Históricos</span>
+        </div>
+        <div class="service-outcome"><small>DE LA MEDICIÓN A LA DECISIÓN</small><strong>Detectar variabilidad. Priorizar recorridos. Usar mejor agua e insumos.</strong></div>
+      </div>
+    </article>
+
+    <article class="service-chapter service-chapter--livestock" data-service="livestock">
+      <div class="service-chapter__copy reveal">
+        <span class="service-index">02 / PRODUCCIÓN PECUARIA</span>
+        <h3>Cada animal<br>deja una señal.</h3>
+        <p>Ubicación, movimiento y comportamiento pueden convertirse en una capa operacional para entender mejor el rebaño, sus recorridos y la interacción con el territorio.</p>
+        <div class="service-capabilities">
+          <span>Collares GPS</span><span>Cercas virtuales</span><span>Geofencing</span><span>Actividad</span><span>Trazabilidad</span><span>Alertas</span>
+        </div>
+        <div class="service-outcome"><small>VISIBILIDAD DEL REBAÑO</small><strong>Seguir movimientos, identificar eventos y construir históricos por animal.</strong></div>
+      </div>
+      <div class="service-chapter__visual service-chapter__visual--synthetic reveal" aria-label="Visualización conceptual de monitoreo pecuario">
+        <div class="pasture-grid" aria-hidden="true"></div>
+        <svg class="livestock-map" viewBox="0 0 900 660" aria-hidden="true">
+          <path class="pasture-border" d="M90 100 L420 65 L810 145 L755 545 L430 610 L110 515 Z"/>
+          <path class="virtual-fence-web" d="M185 205 C320 125 570 145 695 245 C785 320 735 460 590 500 C435 545 230 490 170 360 C145 305 145 250 185 205 Z"/>
+          <path class="animal-route" d="M270 405 C320 365 322 290 390 274 C455 258 470 337 535 314 C585 296 610 243 665 225"/>
+          <circle class="livestock-dot ld1" cx="270" cy="405" r="7"/><circle class="livestock-dot ld2" cx="390" cy="274" r="7"/>
+          <circle class="livestock-dot ld3" cx="535" cy="314" r="7"/><circle class="livestock-dot ld4" cx="665" cy="225" r="7"/>
+          <circle class="livestock-pulse" cx="535" cy="314" r="28"/>
+        </svg>
+        <div class="visual-hud visual-hud--top"><span>ANIMAL 024</span><strong>ONLINE</strong><small>último ping · 42 s</small></div>
+        <div class="visual-hud visual-hud--bottom"><span>GEOCERCA</span><strong>ACTIVA</strong><small>perímetro 2.8 km</small></div>
+        <div class="map-label ml1">NORTE</div><div class="map-label ml2">BEBEDERO</div><div class="map-label ml3">POTRERO 03</div>
+      </div>
+    </article>
+
+    <article class="service-chapter service-chapter--aqua" data-service="aqua">
+      <div class="service-chapter__visual service-chapter__visual--water reveal" aria-label="Visualización conceptual de monitoreo acuícola">
+        <div class="water-surface" aria-hidden="true"></div>
+        <div class="water-caustics" aria-hidden="true"></div>
+        <div class="aqua-probe" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+        <div class="fish fish--1" aria-hidden="true"></div><div class="fish fish--2" aria-hidden="true"></div><div class="fish fish--3" aria-hidden="true"></div>
+        <svg class="aqua-wave-chart" viewBox="0 0 900 660" aria-hidden="true">
+          <path class="aqua-chart-line" d="M80 455 C150 430 190 475 255 445 S360 390 430 420 S535 490 610 442 S735 385 825 414"/>
+        </svg>
+        <div class="visual-hud visual-hud--top"><span>O₂ DISUELTO</span><strong>6.8 mg/L</strong><small>estable</small></div>
+        <div class="visual-hud visual-hud--bottom"><span>TEMP. AGUA</span><strong>24.6 °C</strong><small>profundidad · 1.2 m</small></div>
+        <div class="aqua-depth"><span>0 m</span><span>1 m</span><span>2 m</span></div>
+      </div>
+      <div class="service-chapter__copy reveal">
+        <span class="service-index">03 / ACUICULTURA INTELIGENTE</span>
+        <h3>El agua también<br>produce datos.</h3>
+        <p>Conectamos variables críticas del cultivo acuícola para observar la calidad del agua y relacionarla con biomasa, alimentación y operación de cada estanque o lote.</p>
+        <div class="service-capabilities">
+          <span>Oxígeno disuelto</span><span>Temperatura</span><span>pH</span><span>Turbidez</span><span>Flujo</span><span>Biomasa</span>
+        </div>
+        <div class="service-outcome"><small>CONDICIONES BAJO CONTROL</small><strong>Detectar cambios a tiempo y construir la base de datos para modelos productivos.</strong></div>
+      </div>
+    </article>
+
+    <article class="service-chapter service-chapter--platform" data-service="platform">
+      <div class="service-chapter__copy reveal">
+        <span class="service-index">04 / PLATAFORMA DIMITRA</span>
+        <h3>Una infraestructura.<br>Múltiples operaciones.</h3>
+        <p>DIMITRA unifica sensores, APIs, datos productivos y fuentes externas en una arquitectura preparada para monitoreo, análisis, automatización y futuros modelos de inteligencia artificial.</p>
+        <div class="service-capabilities">
+          <span>IoT</span><span>APIs</span><span>Data history</span><span>Dashboards</span><span>Automatización</span><span>IA / ML ready</span>
+        </div>
+        <div class="service-outcome"><small>CAPA TRANSVERSAL</small><strong>Del dispositivo aislado a una operación que aprende de sus propios datos.</strong></div>
+      </div>
+      <div class="service-chapter__visual service-chapter__visual--platform reveal" aria-label="Arquitectura visual de la plataforma DIMITRA">
+        <div class="platform-grid" aria-hidden="true"></div>
+        <svg class="platform-links" viewBox="0 0 900 660" aria-hidden="true">
+          <path d="M150 160 C275 160 315 265 440 320"/><path d="M150 500 C280 495 325 392 440 338"/>
+          <path d="M750 160 C630 160 585 265 462 320"/><path d="M750 500 C625 490 580 390 462 338"/>
+        </svg>
+        <div class="platform-source ps1"><i></i><span>SENSORES</span><b>128</b></div>
+        <div class="platform-source ps2"><i></i><span>SATÉLITE</span><b>NDVI</b></div>
+        <div class="platform-source ps3"><i></i><span>OPERACIÓN</span><b>API</b></div>
+        <div class="platform-source ps4"><i></i><span>CLIMA</span><b>LIVE</b></div>
+        <div class="platform-brain"><div class="brain-orbit"></div><small>OPERATIONAL DATA LAYER</small><strong>DIMITRA</strong><span>INGEST · STORE · ANALYZE · ACT</span></div>
+        <div class="data-packet dp1"></div><div class="data-packet dp2"></div><div class="data-packet dp3"></div><div class="data-packet dp4"></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="services-cta section-pad reveal">
+    <span>NO VENDEMOS UN SENSOR AISLADO</span>
+    <h3>Construimos la infraestructura de datos que permite entender una operación agropecuaria.</h3>
+    <a class="btn btn--primary magnetic" href="#contacto">Hablemos de tu operación <span>↘</span></a>
+  </div>
+</section>
+
 <section class="home-platform" id="dimitra">
   <div class="multisector section-pad">
     <div class="multisector-copy reveal">
