@@ -4,21 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}AgroTikos | Infraestructura de datos para el campo{% endblock %}</title>
-  <meta name="description" content="AgroTikos conecta sensores, satélites, automatización y analítica para construir infraestructura de datos agropecuaria sobre DEMETER.">
+  <title>{% block title %}AgroTikos | Tecnología inteligente para el campo{% endblock %}</title>
+  <meta name="description" content="AgroTikos conecta conocimiento de campo, sensores, datos, automatización e inteligencia para apoyar mejores decisiones productivas.">
   <meta name="theme-color" content="#07110d">
   <link rel="canonical" href="https://agrotikos.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AgroTikos | Del campo al dato. Del dato a la inteligencia.">
-  <meta property="og:description" content="Infraestructura de datos para agricultura, ganadería, acuicultura y otros sistemas productivos.">
+  <meta property="og:title" content="AgroTikos | Tecnología inteligente para el campo">
+  <meta property="og:description" content="Tecnología práctica para observar, entender y mejorar sistemas productivos agropecuarios.">
   <meta property="og:url" content="https://agrotikos.com/">
   <meta property="og:site_name" content="AgroTikos">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AgroTikos | Tecnología, datos e inteligencia para el campo">
-  <meta name="twitter:description" content="Capturamos, contextualizamos y analizamos información del mundo físico para construir inteligencia útil para el campo.">
+  <meta name="twitter:title" content="AgroTikos | Tecnología inteligente para el campo">
+  <meta name="twitter:description" content="Sensores, datos, automatización e inteligencia aplicados al campo real.">
   <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  {% block extra_head %}{% endblock %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,11 +27,10 @@
     "name": "AgroTikos",
     "url": "https://agrotikos.com",
     "email": "info@agrotikos.com",
-    "description": "Empresa colombiana de tecnología aplicada al sector agropecuario, enfocada en IoT, analítica, automatización e infraestructura de datos.",
+    "description": "Empresa colombiana de tecnología aplicada al sector agropecuario.",
     "areaServed": "CO"
   }
   </script>
-  {% block extra_head %}{% endblock %}
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -40,56 +40,39 @@
       <span></span><span></span><span></span><span></span>
       <svg viewBox="0 0 160 80" role="presentation"><path d="M20 40 L58 18 L96 48 L140 24"/></svg>
     </div>
-    <strong>DEMETER</strong>
+    <strong>AGROTIKOS</strong>
   </div>
 
   <header class="site-header" id="siteHeader">
-    <a class="brand" href="#inicio" aria-label="AgroTikos, inicio">
-      <img src="{% static 'img/logo-mark.svg' %}" alt="" width="38" height="38">
-      <span>AgroTikos</span>
+    <a class="brand wordmark wordmark--dark-bg" href="#inicio" aria-label="AgroTikos, inicio">
+      <span class="wordmark__agro">Agro</span><span class="wordmark__tikos">Tikos</span>
     </a>
 
     <nav class="desktop-nav" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
-      <div class="nav-dropdown">
-        <button type="button" aria-expanded="false">Soluciones <span>+</span></button>
-        <div class="nav-dropdown__menu">
-          <a href="#agricultura">Agricultura de precisión</a>
-          <a href="#pecuario">Pecuario</a>
-          <a href="#acuicultura">Acuicultura</a>
-        </div>
-      </div>
+      <a href="#campo">En campo</a>
       <a href="#demeter">DEMETER</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
     </nav>
 
-    <a class="header-cta" href="#demeter">Conoce DEMETER <span>↗</span></a>
+    <a class="header-cta" href="#demeter">Conoce DEMETER <span>↘</span></a>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav aria-label="Navegación móvil">
       <a href="#inicio"><span>01</span> Inicio</a>
-      <a href="#agricultura"><span>02</span> Agricultura</a>
-      <a href="#pecuario"><span>03</span> Pecuario</a>
-      <a href="#acuicultura"><span>04</span> Acuicultura</a>
-      <a href="#demeter"><span>05</span> DEMETER</a>
-      <a href="#nosotros"><span>06</span> Nosotros</a>
-      <a href="#contacto"><span>07</span> Contacto</a>
+      <a href="#campo"><span>02</span> En campo</a>
+      <a href="#demeter"><span>03</span> DEMETER</a>
     </nav>
   </div>
 
   <main id="contenido">{% block content %}{% endblock %}</main>
 
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <div class="brand brand--footer"><img src="{% static 'img/logo-mark.svg' %}" alt="" width="36" height="36"><span>AgroTikos</span></div>
-      <p>Tecnología, datos e inteligencia para el campo.</p>
-    </div>
-    <div class="footer-links">
-      <a href="#inicio">Inicio</a><a href="#agricultura">Agricultura</a><a href="#pecuario">Pecuario</a><a href="#acuicultura">Acuicultura</a><a href="#demeter">DEMETER</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
-    </div>
+  <footer class="site-footer site-footer--minimal">
+    <a class="wordmark wordmark--dark-bg wordmark--footer" href="#inicio" aria-label="AgroTikos">
+      <span class="wordmark__agro">Agro</span><span class="wordmark__tikos">Tikos</span>
+    </a>
+    <p>Tecnología inteligente para el campo.</p>
     <div class="footer-meta">
       <span>Colombia · LatAm</span>
       <span>© {% now "Y" %} AgroTikos</span>
