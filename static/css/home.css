@@ -1142,3 +1142,15 @@
   .services-page-hero__scroll{left:22px;right:auto;bottom:34px}
   .services-page-hero__glow{width:330px;height:330px;right:-110px;top:18%}
 }
+
+
+.home-contact__inner h2 {
+  font-size: clamp(2.1rem, 3.4vw, 4rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+@media (max-width: 800px) {
+  .home-contact__inner h2 {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
+}
