@@ -142,7 +142,7 @@
 }
 .home-platform .multisector-copy h2 {
   margin: 0;
-  font-size: clamp(3rem, 5.4vw, 6.5rem);
+  font-size: clamp(2.45rem, 4.1vw, 4.9rem);
   line-height: .93;
   letter-spacing: -.065em;
   font-weight: 590;
@@ -226,7 +226,7 @@
     padding: 95px 22px 80px;
   }
   .home-platform .multisector-copy h2 {
-    font-size: clamp(3rem, 13vw, 5rem);
+    font-size: clamp(2.45rem, 10.5vw, 4rem);
   }
   .home-platform .sector-orbit {
     min-height: 530px;
