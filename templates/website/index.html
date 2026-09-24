@@ -1,0 +1,331 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> INFRAESTRUCTURA DE DATOS · AGTECH · COLOMBIA</div>
+    <h1 id="hero-title">Del campo al dato.<br><span>Del dato a la inteligencia.</span></h1>
+    <p>Conectamos sensores, satélites, GPS, automatización y sistemas existentes para construir el histórico que permite entender mejor cada operación agropecuaria.</p>
+    <div class="hero-actions">
+      <a class="btn btn--primary magnetic" href="#demeter">Conoce DEMETER <span>↘</span></a>
+      <a class="btn btn--ghost" href="#soluciones">Explora nuestras soluciones <span>→</span></a>
+    </div>
+    <div class="hero-proof">
+      <span>CAPTURAR</span><i></i><span>CONTEXTUALIZAR</span><i></i><span>ANALIZAR</span><i></i><span>ACTUAR</span>
+    </div>
+  </div>
+
+  <div class="hero-system" data-hero-system aria-label="Visualización conceptual del flujo de datos hacia DEMETER">
+    <svg class="hero-links" viewBox="0 0 760 660" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <defs>
+        <linearGradient id="heroLink" x1="0" x2="1"><stop stop-color="#89F0B5" stop-opacity=".2"/><stop offset="1" stop-color="#53D7E8" stop-opacity=".9"/></linearGradient>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <path class="data-path" d="M90 140 C220 130 250 300 370 320"/>
+      <path class="data-path" d="M135 485 C220 470 270 355 370 330"/>
+      <path class="data-path" d="M610 125 C540 160 510 270 395 320"/>
+      <path class="data-path" d="M625 490 C545 445 515 365 395 335"/>
+      <circle class="signal signal-a" cx="90" cy="140" r="4"/>
+      <circle class="signal signal-b" cx="135" cy="485" r="4"/>
+      <circle class="signal signal-c" cx="610" cy="125" r="4"/>
+      <circle class="signal signal-d" cx="625" cy="490" r="4"/>
+    </svg>
+
+    <div class="source-node source-node--field" data-float="1">
+      <span class="node-kicker">CULTIVO</span><strong>SOIL 34%</strong><small>Sensor · lote 04</small><b class="pulse"></b>
+    </div>
+    <div class="source-node source-node--weather" data-float="2">
+      <span class="node-kicker">CLIMA</span><strong>18.4 °C</strong><small>RH 71% · 2 min</small><b class="pulse"></b>
+    </div>
+    <div class="source-node source-node--animal" data-float="3">
+      <span class="node-kicker">GANADO</span><strong>GPS ONLINE</strong><small>Animal 024</small><b class="pulse"></b>
+    </div>
+    <div class="source-node source-node--sat" data-float="4">
+      <span class="node-kicker">SATÉLITE</span><strong>NDVI 0.73</strong><small>Escena procesada</small><b class="pulse"></b>
+    </div>
+
+    <div class="demeter-core hero-core">
+      <span class="core-orbit core-orbit--1"></span><span class="core-orbit core-orbit--2"></span>
+      <div class="core-mark"><small>DATA LAYER</small><strong>DEMETER</strong><span>operational intelligence</span></div>
+    </div>
+
+    <div class="hero-output hero-output--chart"><span>HISTÓRICO</span><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="hero-output hero-output--alert"><span>ALERTA</span><strong>Humedad ↓</strong><small>Zona norte</small></div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO TRACE THE DATA</span><i></i></div>
+</section>
+
+<section class="observation section-pad" id="datos">
+  <div class="section-intro reveal">
+    <span class="section-number">01 · OBSERVAR</span>
+    <h2>Cada hectárea tiene una historia que todavía no estamos midiendo.</h2>
+    <p>Clima, suelo, agua, crecimiento, ubicación, consumo, biomasa y productividad cambian todos los días. El primer paso para construir inteligencia útil es aprender a observar el sistema productivo con continuidad.</p>
+  </div>
+
+  <div class="field-observer" data-field-scene>
+    <div class="field-observer__map">
+      <div class="field-zone field-zone--a"><span>LOTE A</span></div>
+      <div class="field-zone field-zone--b"><span>LOTE B</span></div>
+      <div class="field-zone field-zone--c"><span>LOTE C</span></div>
+      <div class="field-zone field-zone--d"><span>LOTE D</span></div>
+      <button class="sensor-dot s1" aria-label="Sensor de suelo: 34 por ciento"><i></i><span>SM 34%</span></button>
+      <button class="sensor-dot s2" aria-label="Temperatura: 18.4 grados"><i></i><span>18.4 °C</span></button>
+      <button class="sensor-dot s3" aria-label="Radiación solar"><i></i><span>RAD 680</span></button>
+      <button class="sensor-dot s4" aria-label="Precipitación"><i></i><span>RAIN 2.4</span></button>
+      <div class="field-scan"></div>
+      <div class="field-coordinates">04°42' N · 74°04' W <span>LIVE FIELD LAYER</span></div>
+    </div>
+    <div class="field-observer__side">
+      <div class="observer-step is-active"><span>01</span><div><strong>Mundo físico</strong><p>La operación existe antes del dashboard.</p></div></div>
+      <div class="observer-step"><span>02</span><div><strong>Captura</strong><p>Instrumentamos las variables que importan.</p></div></div>
+      <div class="observer-step"><span>03</span><div><strong>Histórico</strong><p>Cada medición adquiere tiempo, lugar y contexto.</p></div></div>
+      <div class="observer-step"><span>04</span><div><strong>Inteligencia</strong><p>El histórico permite detectar patrones y anomalías.</p></div></div>
+    </div>
+  </div>
+
+  <div class="variables-marquee" aria-label="Variables que puede capturar la plataforma">
+    <div><span>HUMEDAD DE SUELO</span><span>TEMPERATURA</span><span>RADIACIÓN</span><span>PRECIPITACIÓN</span><span>GPS</span><span>OXÍGENO DISUELTO</span><span>BIOMASA</span><span>CONDUCTIVIDAD</span><span>NDVI</span><span>CAUDAL</span></div>
+  </div>
+</section>
+
+<section class="solutions-index section-pad" id="soluciones">
+  <div class="section-intro section-intro--split reveal">
+    <div><span class="section-number">02 · SOLUCIONES</span><h2>Una arquitectura.<br>Cuatro formas de entrar al problema.</h2></div>
+    <p>No partimos de un catálogo de dispositivos. Partimos de lo que necesitas medir, del contexto productivo y de las decisiones que quieres mejorar.</p>
+  </div>
+  <div class="solution-rail">
+    <a href="#agricultura"><span>01</span><strong>Agricultura de precisión</strong><em>Suelo · clima · satélite · riego</em><b>↘</b></a>
+    <a href="#pecuario"><span>02</span><strong>Ganadería conectada</strong><em>GPS · actividad · potreros · manejo</em><b>↘</b></a>
+    <a href="#acuicultura"><span>03</span><strong>Acuicultura inteligente</strong><em>Agua · biomasa · alimentación · aireación</em><b>↘</b></a>
+    <a href="#demeter"><span>04</span><strong>DEMETER</strong><em>Captura · histórico · contexto · acción</em><b>↘</b></a>
+  </div>
+</section>
+
+<section class="solution solution--agri" id="agricultura" data-theme="agri">
+  <div class="solution-sticky">
+    <div class="solution-copy">
+      <span class="section-number">03 · AGRICULTURA DE PRECISIÓN</span>
+      <h2>Entender lo que sucede en cada metro del cultivo.</h2>
+      <p>Combinamos sensores en campo con información geoespacial para construir una lectura temporal y espacial de la operación.</p>
+      <div class="capability-tags"><span>IoT</span><span>Sentinel</span><span>NDVI / NDWI</span><span>Clima</span><span>Series temporales</span></div>
+      <div class="availability-legend"><span><i class="dot-now"></i> Tecnología disponible</span><span><i class="dot-rd"></i> Capacidades en desarrollo</span></div>
+    </div>
+
+    <div class="agri-gis" data-gis>
+      <div class="gis-topbar"><span>FINCA · LOTE NORTE</span><span class="status-online">● 4 NODOS ONLINE</span></div>
+      <div class="gis-canvas">
+        <div class="gis-grid"></div>
+        <div class="gis-plot p1"></div><div class="gis-plot p2"></div><div class="gis-plot p3"></div><div class="gis-plot p4"></div>
+        <div class="ndvi-overlay"></div>
+        <div class="gis-sensor gs1"><i></i><span>SM 31%</span></div>
+        <div class="gis-sensor gs2"><i></i><span>T 19.2°</span></div>
+        <div class="gis-sensor gs3"><i></i><span>EC 1.4</span></div>
+        <div class="gis-alert"><i>!</i><span>Estrés potencial<br><small>zona 03</small></span></div>
+        <div class="satellite-sweep"></div>
+      </div>
+      <div class="gis-controls"><button class="is-active" type="button">RGB</button><button type="button">NDVI</button><button type="button">SENSORES</button><button type="button">HISTÓRICO</button></div>
+    </div>
+  </div>
+
+  <div class="solution-details section-pad">
+    <article class="detail-block reveal"><span>CAPTURA</span><h3>Sensores que convierten condiciones reales en series temporales.</h3><p>Humedad y temperatura de suelo, temperatura y humedad ambiente, precipitación, radiación, presión, conductividad y variables específicas según el cultivo.</p></article>
+    <article class="detail-block reveal"><span>CONTEXTO</span><h3>Satélite para mirar el lote como sistema, no como un punto.</h3><p>Series Sentinel, índices de vegetación, vigor, anomalías y evolución espacial complementan la lectura de los sensores instalados.</p></article>
+    <article class="detail-block reveal"><span>APLICACIÓN</span><h3>Del monitoreo a mejores decisiones operativas.</h3><p>Seguimiento de humedad, apoyo a programación de riego, comparación entre lotes, históricos meteorológicos, alertas y detección de anomalías.</p></article>
+    <article class="detail-block detail-block--future reveal"><span>I+D</span><h3>El histórico abre la puerta a modelos específicos por cultivo.</h3><p>Predicción, estimaciones futuras de productividad y automatización se desarrollan sobre datos suficientes, contextualizados y validados.</p></article>
+  </div>
+</section>
+
+<section class="solution solution--livestock" id="pecuario" data-theme="livestock">
+  <div class="section-pad solution-heading reveal">
+    <span class="section-number">04 · PECUARIO</span>
+    <h2>Ganadería conectada.</h2>
+    <p>Cada animal puede convertirse en una nueva fuente de información, pero el valor aparece cuando esa señal se interpreta dentro del potrero, el manejo y el tiempo.</p>
+  </div>
+
+  <div class="livestock-map" data-livestock>
+    <div class="livestock-map__meta"><span>PASTOREO · ZONA OESTE</span><span>12:48:03 · GPS LIVE</span></div>
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+      <path class="terrain-line" d="M0 480 C180 380 300 520 450 430 S760 330 1200 420"/>
+      <path class="terrain-line terrain-line--2" d="M0 190 C200 260 310 150 500 225 S820 295 1200 195"/>
+      <path class="virtual-fence" d="M170 150 L835 115 L1040 420 L710 605 L205 520 Z"/>
+      <path class="animal-route" d="M315 380 C430 280 570 450 730 300 S870 260 925 350"/>
+    </svg>
+    <div class="animal-dot a1" data-animal="024"><i></i><span>024</span></div>
+    <div class="animal-dot a2" data-animal="031"><i></i><span>031</span></div>
+    <div class="animal-dot a3" data-animal="018"><i></i><span>018</span></div>
+    <div class="animal-dot a4" data-animal="042"><i></i><span>042</span></div>
+    <div class="animal-dot a5" data-animal="057"><i></i><span>057</span></div>
+    <div class="animal-card" id="animalCard"><span>ANIMAL 024</span><strong>ACTIVITY · NORMAL</strong><div><small>LOCATION</small><b>04.712 / -74.041</b></div><div><small>LAST UPDATE</small><b>18 SEC AGO</b></div></div>
+    <div class="heatmap h1"></div><div class="heatmap h2"></div><div class="heatmap h3"></div>
+  </div>
+
+  <div class="livestock-columns section-pad">
+    <article class="reveal"><span>01</span><h3>Collares inteligentes</h3><p>GPS/GNSS, movimiento, actividad, rutas, permanencia y uso del potrero pueden alimentar históricos individuales y de grupo.</p></article>
+    <article class="reveal"><span>02</span><h3>Cercas virtuales</h3><p>Zonas permitidas y restringidas, divisiones dinámicas y alertas pueden formar parte del manejo cuando el contexto técnico, operativo y de bienestar animal lo permite.</p></article>
+    <article class="reveal"><span>03</span><h3>Analítica de comportamiento</h3><p>El histórico permite explorar patrones de pastoreo, distribución, actividad anormal, uso de potreros y otras anomalías relevantes.</p></article>
+  </div>
+</section>
+
+<section class="solution solution--aqua" id="acuicultura" data-theme="aqua">
+  <div class="aqua-background" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="section-pad aqua-grid">
+    <div class="solution-heading reveal">
+      <span class="section-number">05 · ACUICULTURA</span>
+      <h2>Entender el agua es entender el cultivo.</h2>
+      <p>Integramos variables del agua, alimentación, biomasa y operación para construir un histórico que ayude a detectar condiciones de riesgo y entender mejor el ciclo productivo.</p>
+      <div class="aqua-variables"><span>pH</span><span>DO</span><span>°C</span><span>NH₄⁺</span><span>NTU</span><span>FLOW</span><span>LEVEL</span></div>
+    </div>
+
+    <div class="pond-visual" data-pond>
+      <div class="pond-rim"></div>
+      <div class="pond-water"><div class="water-wave"></div><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div><div class="bubble b4"></div></div>
+      <div class="probe probe--1"><i></i><span>DO 6.8 mg/L</span></div>
+      <div class="probe probe--2"><i></i><span>pH 7.4</span></div>
+      <div class="probe probe--3"><i></i><span>28.1 °C</span></div>
+      <div class="pond-pipe"><span></span><i></i><i></i><i></i></div>
+      <div class="pond-label">POND A07 · LIVE</div>
+    </div>
+  </div>
+
+  <div class="aqua-process section-pad">
+    <div class="aqua-process__flow reveal">
+      <span>SENSOR</span><i>→</i><span>DATO</span><i>→</i><span>HISTÓRICO</span><i>→</i><span>MODELO</span><i>→</i><span>ALERTA</span>
+    </div>
+    <div class="aqua-cards">
+      <article class="reveal"><span>CALIDAD DEL AGUA</span><h3>Temperatura, pH, oxígeno disuelto, salinidad, turbidez, conductividad, caudal y nivel.</h3><p>La instrumentación se define según especie, sistema y riesgo operativo; no por una lista fija de sensores.</p></article>
+      <article class="reveal"><span>ALIMENTACIÓN</span><h3>Biomasa + etapa + agua + consumo + alimento suministrado.</h3><p>Un histórico consistente puede servir de base para herramientas que apoyen estrategias de alimentación sin prometer ahorros automáticos.</p></article>
+      <article class="reveal"><span>AIREACIÓN Y FLUJO</span><h3>Alertar, registrar y eventualmente controlar.</h3><p>Oxígeno disuelto, recambios, bombas, caudales y consumo energético pueden relacionarse para entender mejor la operación.</p></article>
+      <article class="reveal"><span>SEDIMENTOS Y LIMPIEZA</span><h3>El evento operativo también es un dato.</h3><p>Limpieza, retiro de sólidos, mantenimiento y estado del estanque pueden correlacionarse a futuro con crecimiento, mortalidad y calidad del agua.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="demeter" id="demeter" data-demeter-section>
+  <div class="demeter-intro section-pad reveal">
+    <span class="section-number">06 · DEMETER</span>
+    <h2>El sistema operativo de datos para el campo.</h2>
+    <p>No es solo un dashboard. Es la capa que recibe información del mundo físico, la ordena, la relaciona con la operación y la convierte en una base útil para analítica, modelos y automatización.</p>
+  </div>
+
+  <div class="demeter-stack section-pad">
+    <div class="stack-visual" aria-hidden="true"><div class="stack-core">DEMETER</div><div class="stack-ring r1"></div><div class="stack-ring r2"></div><div class="stack-ring r3"></div></div>
+    <div class="stack-list">
+      <article class="stack-item is-active" data-stack="capture"><span>01</span><div><small>CAPA 1</small><h3>Captura</h3><p>Sensores, estaciones, satélites, GPS, maquinaria, APIs, registros humanos, cámaras, drones y sistemas de terceros.</p></div></article>
+      <article class="stack-item" data-stack="ingest"><span>02</span><div><small>CAPA 2</small><h3>Ingesta</h3><p>La información entra por canales distintos y se centraliza bajo una arquitectura común.</p></div></article>
+      <article class="stack-item" data-stack="history"><span>03</span><div><small>CAPA 3</small><h3>Histórico</h3><p>Construimos series temporales que permiten ver comportamiento, no solo el último valor.</p></div></article>
+      <article class="stack-item" data-stack="context"><span>04</span><div><small>CAPA 4</small><h3>Contexto</h3><p>Sensor + ubicación + lote + cultivo + animal + fecha + clima + evento productivo.</p></div></article>
+      <article class="stack-item" data-stack="intelligence"><span>05</span><div><small>CAPA 5</small><h3>Inteligencia</h3><p>Anomalías, modelos predictivos, machine learning, computer vision y modelos específicos por explotación.</p></div></article>
+      <article class="stack-item" data-stack="action"><span>06</span><div><small>CAPA 6</small><h3>Acción</h3><p>Alertas, recomendaciones, tareas, automatizaciones y control de dispositivos cuando el caso de uso lo requiere.</p></div></article>
+    </div>
+  </div>
+
+  <div class="multisector section-pad">
+    <div class="multisector-copy reveal"><span class="section-number">ARQUITECTURA MULTISECTOR</span><h3>Una plataforma. Diferentes sistemas productivos. Una misma infraestructura de datos.</h3></div>
+    <div class="sector-orbit" data-sector-orbit>
+      <svg viewBox="0 0 900 650" aria-hidden="true"><path d="M450 325 L160 125 M450 325 L740 125 M450 325 L110 365 M450 325 L790 365 M450 325 L250 560 M450 325 L650 560"/></svg>
+      <div class="orbit-core"><small>DATA INFRASTRUCTURE</small><strong>DEMETER</strong><span>one operational layer</span></div>
+      <div class="sector-node n1"><i></i><span>AGRICULTURA</span></div>
+      <div class="sector-node n2"><i></i><span>GANADERÍA</span></div>
+      <div class="sector-node n3"><i></i><span>ACUICULTURA</span></div>
+      <div class="sector-node n4"><i></i><span>FLORICULTURA</span></div>
+      <div class="sector-node n5"><i></i><span>INVERNADEROS</span></div>
+      <div class="sector-node n6"><i></i><span>AVICULTURA</span></div>
+    </div>
+  </div>
+
+  <div class="product-window-wrap section-pad">
+    <div class="section-intro section-intro--split reveal"><div><span class="section-number">PLATAFORMA</span><h3>La operación visible en una sola capa.</h3></div><p>Mockup conceptual de la experiencia DEMETER: mapa, dispositivos, series temporales, alertas y estado operativo.</p></div>
+    <div class="product-window" data-product-demo>
+      <div class="product-sidebar"><div class="product-logo"><img src="{% static 'img/logo-mark.svg' %}" alt="" width="30" height="30"><b>DEMETER</b></div><nav><span class="active">Overview</span><span>Maps</span><span>Sensors</span><span>Fields</span><span>Stations</span><span>Alerts</span></nav><div class="sync-state"><i></i> Sync healthy</div></div>
+      <div class="product-main">
+        <div class="product-top"><div><small>FINCA EL PARAÍSO</small><h4>Operational overview</h4></div><button type="button">Last 24 hours⌄</button></div>
+        <div class="kpi-grid"><div><small>SENSORS ONLINE</small><strong>23</strong><span>+2 this week</span></div><div><small>ACTIVE ALERTS</small><strong>2</strong><span>needs review</span></div><div><small>SOIL MOISTURE</small><strong>34%</strong><span>field average</span></div><div><small>RAINFALL</small><strong>8.2</strong><span>mm / 24h</span></div></div>
+        <div class="dashboard-grid">
+          <div class="dashboard-map"><div class="map-grid"></div><div class="map-polygon mp1"></div><div class="map-polygon mp2"></div><div class="map-polygon mp3"></div><span class="map-sensor m1"></span><span class="map-sensor m2"></span><span class="map-sensor m3"></span><span class="map-sensor m4"></span><div class="map-legend"><span><i></i> Sensor</span><span><i></i> Alert</span></div></div>
+          <div class="dashboard-chart"><div class="chart-head"><span>SOIL MOISTURE</span><b>Last 24h</b></div><svg viewBox="0 0 600 230" preserveAspectRatio="none"><path class="chart-area" d="M0 180 C60 170 70 90 140 110 S220 185 290 145 S350 60 420 85 S520 145 600 70 L600 230 L0 230 Z"/><path class="chart-line" d="M0 180 C60 170 70 90 140 110 S220 185 290 145 S350 60 420 85 S520 145 600 70"/></svg><div class="chart-axis"><span>00h</span><span>06h</span><span>12h</span><span>18h</span><span>24h</span></div></div>
+        </div>
+        <div class="alerts-row"><span class="alert-pill">● NODE-07 · moisture below threshold</span><span class="alert-pill alert-pill--info">● SAT · new scene processed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ai-philosophy section-pad" id="ia">
+  <div class="section-intro reveal"><span class="section-number">07 · INTELIGENCIA ARTIFICIAL</span><h2>Primero los datos.<br>Después la inteligencia.</h2><p>No aplicamos IA como una capa decorativa. Un modelo solo puede aprender de la información que existe, de su calidad y del contexto que conserva.</p></div>
+  <div class="time-growth" data-time-growth>
+    <div class="time-growth__axis"><span>DÍA 1</span><span>30 DÍAS</span><span>6 MESES</span><span>1 AÑO</span><span>MILLONES DE MEDICIONES</span><strong>MODELOS</strong></div>
+    <div class="data-cloud" aria-hidden="true"></div>
+  </div>
+  <div class="ai-principles">
+    <article class="reveal"><span>01</span><h3>Captura suficiente</h3><p>No todos los problemas necesitan el mismo volumen ni la misma frecuencia de datos.</p></article>
+    <article class="reveal"><span>02</span><h3>Contexto operacional</h3><p>Una lectura aislada vale menos que una medición relacionada con lote, evento, clima y tiempo.</p></article>
+    <article class="reveal"><span>03</span><h3>Modelos específicos</h3><p>La meta es construir modelos útiles para procesos concretos, no un algoritmo genérico que prometa resolverlo todo.</p></article>
+  </div>
+</section>
+
+<section class="about section-pad" id="nosotros">
+  <div class="about-grid">
+    <div class="section-intro reveal"><span class="section-number">08 · AGROTIKOS</span><h2>Tecnología creada entendiendo el campo.</h2></div>
+    <div class="about-copy reveal"><p>En AgroTikos unimos experiencia del campo con desarrollo de tecnología para mejorar la forma en que se observan y gestionan cultivos, ganado, agua y otros recursos productivos.</p><p>Trabajamos para que productores y empresas puedan tomar decisiones con información real, reducir incertidumbre y construir capacidad de automatización mediante sensores, software, analítica e inteligencia artificial.</p><p>Nuestro enfoque es práctico: instrumentar lo que importa, integrar lo que ya existe y adaptar la arquitectura a la realidad de cada finca o proyecto.</p></div>
+  </div>
+
+  <div class="team-grid">
+    <article class="team-member reveal"><div class="team-index">01</div><div class="team-photo-placeholder"><span>JE</span><small>FOTO OFICIAL PENDIENTE</small></div><h3>Juan Manuel Echeverry</h3><p>Especialista en alta gerencia y desarrollo de negocios con amplia trayectoria en el mercado tecnológico.</p></article>
+    <article class="team-member reveal"><div class="team-index">02</div><div class="team-photo-placeholder"><span>GS</span><small>FOTO OFICIAL PENDIENTE</small></div><h3>Gustavo Sandoval</h3><p>Experto en el área comercial y en la integración de soluciones tecnológicas para diferentes sectores de la industria.</p></article>
+    <article class="team-member reveal"><div class="team-index">03</div><div class="team-photo-placeholder"><span>CS</span><small>FOTO OFICIAL PENDIENTE</small></div><h3>Camilo Sanchez</h3><p>Arquitecto de soluciones tecnológicas con experiencia en software, hardware e integración de sistemas. Piloto de dron certificado.</p></article>
+    <article class="team-member reveal"><div class="team-index">04</div><div class="team-photo-placeholder"><span>OJ</span><small>FOTO OFICIAL PENDIENTE</small></div><h3>Oscar Jimenez</h3><p>Desarrollador de software especializado en backend, arquitectura de datos e implementación de algoritmos y soluciones de Inteligencia Artificial.</p></article>
+  </div>
+</section>
+
+<section class="pilot-cta section-pad">
+  <span class="section-number">09 · PROYECTOS PILOTO</span>
+  <div class="pilot-cta__content reveal"><h2>Construyamos el próximo caso de uso.</h2><p>Si tienes un proceso que hoy depende de observación manual, datos dispersos o decisiones sin suficiente contexto, podemos analizar qué vale la pena medir primero.</p><a class="btn btn--primary magnetic" href="#contacto">Plantear un reto <span>↘</span></a></div>
+</section>
+
+<section class="final-manifesto" data-manifesto>
+  <div class="manifesto-field" aria-hidden="true"><div class="manifesto-dots"></div></div>
+  <div class="manifesto-copy reveal"><span>AGROTIKOS + DEMETER</span><h2>El futuro del campo comienza con los datos que capturemos hoy.</h2><a class="btn btn--light magnetic" href="#contacto">Construyamos tu infraestructura de datos <span>↘</span></a></div>
+</section>
+
+<section class="contact section-pad" id="contacto">
+  <div class="contact-grid">
+    <div class="contact-copy reveal">
+      <span class="section-number">10 · CONTACTO</span>
+      <h2>Hablemos de tu operación.</h2>
+      <p>Cada finca, cultivo y sistema productivo genera desafíos diferentes. Cuéntanos qué necesitas medir, entender o automatizar.</p>
+      <div class="contact-lines">
+        <a href="mailto:info@agrotikos.com"><span>EMAIL</span><strong>info@agrotikos.com</strong></a>
+        <a href="https://wa.me/573002089320" rel="noopener" target="_blank"><span>GUSTAVO SANDOVAL</span><strong>+57 300 208 9320 ↗</strong></a>
+        <a href="https://wa.me/573154133813" rel="noopener" target="_blank"><span>JUAN ECHEVERRY</span><strong>+57 315 413 3813 ↗</strong></a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal">
+      {% if messages %}{% for message in messages %}<div class="form-success" role="status">{{ message }}</div>{% endfor %}{% endif %}
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
+        <div class="form-row">
+          <label for="{{ form.name.id_for_label }}">Nombre</label>{{ form.name }}{{ form.name.errors }}
+        </div>
+        <div class="form-row">
+          <label for="{{ form.company.id_for_label }}">Empresa / finca</label>{{ form.company }}{{ form.company.errors }}
+        </div>
+        <div class="form-row">
+          <label for="{{ form.operation_type.id_for_label }}">Tipo de operación</label>{{ form.operation_type }}{{ form.operation_type.errors }}
+        </div>
+        <div class="form-grid-2">
+          <div class="form-row"><label for="{{ form.email.id_for_label }}">Email</label>{{ form.email }}{{ form.email.errors }}</div>
+          <div class="form-row"><label for="{{ form.phone.id_for_label }}">Teléfono</label>{{ form.phone }}{{ form.phone.errors }}</div>
+        </div>
+        <div class="form-row"><label for="{{ form.message.id_for_label }}">Mensaje</label>{{ form.message }}{{ form.message.errors }}</div>
+        <button class="btn btn--primary btn--submit" type="submit">Cuéntanos qué quieres medir <span>↗</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
