@@ -44,7 +44,7 @@
   </div>
 
   <header class="site-header" id="siteHeader">
-    <a class="brand brand--refined" href="#inicio" aria-label="AgroTikos, inicio">
+    <a class="brand brand--refined" href="{% url 'home' %}" aria-label="AgroTikos, inicio">
       <span class="brand-name" aria-hidden="true">
         <span class="brand-name__agro">Agro</span><span class="brand-name__tikos">Tikos</span>
       </span>
@@ -52,26 +52,26 @@
     </a>
 
     <nav class="desktop-nav desktop-nav--primary" aria-label="Navegación principal">
-      <a class="nav-top-btn is-active" href="#inicio">Inicio</a>
-      <a class="nav-top-btn" href="#servicios">Servicios</a>
-      <a class="nav-top-btn" href="#dimitra">DIMITRA</a>
+      <a class="nav-top-btn" href="{% url 'home' %}">Inicio</a>
+      <a class="nav-top-btn" href="{% url 'services' %}">Servicios</a>
+      <a class="nav-top-btn" href="{% url 'home' %}#dimitra">DIMITRA</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav aria-label="Navegación móvil">
-      <a href="#inicio"><span>01</span> Inicio</a>
-      <a href="#servicios"><span>02</span> Servicios</a>
-      <a href="#dimitra"><span>03</span> DIMITRA</a>
-      <a href="#contacto"><span>04</span> Contacto</a>
+      <a href="{% url 'home' %}"><span>01</span> Inicio</a>
+      <a href="{% url 'services' %}"><span>02</span> Servicios</a>
+      <a href="{% url 'home' %}#dimitra"><span>03</span> DIMITRA</a>
+      <a href="{% url 'home' %}#contacto"><span>04</span> Contacto</a>
     </nav>
   </div>
 
   <main id="contenido">{% block content %}{% endblock %}</main>
 
   <footer class="site-footer site-footer--minimal">
-    <a class="brand brand--refined brand--footer-refined" href="#inicio" aria-label="AgroTikos">
+    <a class="brand brand--refined brand--footer-refined" href="{% url 'home' %}" aria-label="AgroTikos">
       <span class="brand-name" aria-hidden="true">
         <span class="brand-name__agro">Agro</span><span class="brand-name__tikos">Tikos</span>
       </span>
