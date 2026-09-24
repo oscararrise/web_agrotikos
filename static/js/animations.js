@@ -142,3 +142,103 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+
+/* Services immersive motion */
+(() => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const initServicesMotion = () => {
+    const chapters = document.querySelectorAll('.service-chapter');
+    if (!chapters.length || reduced) return;
+
+    if (window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      chapters.forEach((chapter, index) => {
+        const visual = chapter.querySelector('.service-chapter__visual');
+        const copy = chapter.querySelector('.service-chapter__copy');
+        const huds = chapter.querySelectorAll('.visual-hud');
+
+        if (visual) {
+          gsap.fromTo(visual,
+            { clipPath: index % 2 ? 'inset(0 0 0 8%)' : 'inset(0 8% 0 0)' },
+            {
+              clipPath: 'inset(0 0% 0 0%)',
+              duration: 1.25,
+              ease: 'power3.out',
+              scrollTrigger: { trigger: chapter, start: 'top 78%', once: true }
+            }
+          );
+
+          gsap.to(visual, {
+            yPercent: 4,
+            ease: 'none',
+            scrollTrigger: { trigger: chapter, start: 'top bottom', end: 'bottom top', scrub: .7 }
+          });
+        }
+
+        if (copy) {
+          gsap.from(copy.children, {
+            y: 26,
+            opacity: 0,
+            stagger: .08,
+            duration: .8,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: copy, start: 'top 76%', once: true }
+          });
+        }
+
+        huds.forEach((hud, hudIndex) => {
+          gsap.to(hud, {
+            y: hudIndex % 2 ? -8 : 9,
+            duration: 2.8 + hudIndex * .35,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+          });
+        });
+      });
+
+      gsap.from('.services-flow span, .services-flow i', {
+        opacity: 0,
+        x: -12,
+        stagger: .08,
+        duration: .55,
+        ease: 'power2.out',
+        scrollTrigger: { trigger: '.services-flow', start: 'top 88%', once: true }
+      });
+
+      gsap.from('.services-cta h3', {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.services-cta', start: 'top 72%', once: true }
+      });
+    }
+
+    chapters.forEach((chapter) => {
+      const visual = chapter.querySelector('.service-chapter__visual');
+      if (!visual || window.matchMedia('(pointer: coarse)').matches) return;
+
+      visual.addEventListener('pointermove', (event) => {
+        const rect = visual.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        visual.style.setProperty('--mx', String(x));
+        visual.style.setProperty('--my', String(y));
+        visual.querySelectorAll('.visual-hud').forEach((hud, i) => {
+          hud.style.translate = `${x * (8 + i * 3)}px ${y * (8 + i * 3)}px`;
+        });
+      });
+
+      visual.addEventListener('pointerleave', () => {
+        visual.querySelectorAll('.visual-hud').forEach((hud) => { hud.style.translate = ''; });
+      });
+    });
+  };
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initServicesMotion);
+  else initServicesMotion();
+})();
