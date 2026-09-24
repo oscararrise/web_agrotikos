@@ -44,33 +44,29 @@
   </div>
 
   <header class="site-header" id="siteHeader">
-    <a class="brand wordmark wordmark--dark-bg" href="#inicio" aria-label="AgroTikos, inicio">
-      <span class="wordmark__agro">Agro</span><span class="wordmark__tikos">Tikos</span>
+    <a class="brand brand--official" href="#inicio" aria-label="AgroTikos, inicio">
+      <img src="{% static 'img/agrotikos-logo.png' %}" alt="AgroTikos Technology">
     </a>
 
-    <nav class="desktop-nav" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a>
-      <a href="#campo">En campo</a>
-      <a href="#dimitra">DIMITRA</a>
+    <nav class="desktop-nav desktop-nav--primary" aria-label="Navegación principal">
+      <a class="nav-top-btn is-active" href="#inicio">Inicio</a>
+      <button class="nav-top-btn nav-top-btn--future" type="button" title="Servicios: próximamente">Servicios <span>PRÓXIMAMENTE</span></button>
     </nav>
-
-    <a class="header-cta" href="#dimitra">Conoce DIMITRA <span>↘</span></a>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav aria-label="Navegación móvil">
       <a href="#inicio"><span>01</span> Inicio</a>
-      <a href="#campo"><span>02</span> En campo</a>
-      <a href="#dimitra"><span>03</span> DIMITRA</a>
+      <button class="mobile-service-future" type="button"><span>02</span> Servicios <small>PRÓXIMAMENTE</small></button>
     </nav>
   </div>
 
   <main id="contenido">{% block content %}{% endblock %}</main>
 
   <footer class="site-footer site-footer--minimal">
-    <a class="wordmark wordmark--dark-bg wordmark--footer" href="#inicio" aria-label="AgroTikos">
-      <span class="wordmark__agro">Agro</span><span class="wordmark__tikos">Tikos</span>
+    <a class="footer-official-logo" href="#inicio" aria-label="AgroTikos">
+      <img src="{% static 'img/agrotikos-logo.png' %}" alt="AgroTikos Technology">
     </a>
     <p>Tecnología inteligente para el campo.</p>
     <div class="footer-meta">

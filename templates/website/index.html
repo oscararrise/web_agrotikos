@@ -74,21 +74,57 @@
       <p>DIMITRA conecta las fuentes de información de cada operación bajo una misma capa tecnológica, preparada para crecer desde el monitoreo hacia analítica, modelos y automatización.</p>
     </div>
 
-    <div class="sector-orbit" data-sector-orbit aria-label="Sectores productivos conectados a DIMITRA">
-      <svg viewBox="0 0 900 650" aria-hidden="true">
-        <path d="M450 325 L160 125 M450 325 L740 125 M450 325 L110 365 M450 325 L790 365 M450 325 L250 560 M450 325 L650 560"/>
+    <div class="sector-orbit sector-orbit--advanced" data-sector-orbit aria-label="Sectores productivos conectados a DIMITRA">
+      <div class="orbit-grid" aria-hidden="true"></div>
+      <div class="orbit-glow" aria-hidden="true"></div>
+      <div class="orbit-ring orbit-ring--outer" aria-hidden="true"></div>
+      <div class="orbit-ring orbit-ring--mid" aria-hidden="true"></div>
+      <div class="orbit-ring orbit-ring--inner" aria-hidden="true"></div>
+
+      <svg class="orbit-network" viewBox="0 0 900 650" aria-hidden="true">
+        <path class="sector-path" d="M450 325 C340 250 260 180 160 125"/>
+        <path class="sector-path" d="M450 325 C560 250 650 180 740 125"/>
+        <path class="sector-path" d="M450 325 C315 330 220 350 110 365"/>
+        <path class="sector-path" d="M450 325 C590 330 690 350 790 365"/>
+        <path class="sector-path" d="M450 325 C370 430 315 500 250 560"/>
+        <path class="sector-path" d="M450 325 C535 430 585 500 650 560"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
+        <circle class="sector-signal" cx="450" cy="325" r="4"/>
       </svg>
-      <div class="orbit-core">
+
+      <div class="orbit-core orbit-core--advanced">
+        <span class="core-scan" aria-hidden="true"></span>
+        <span class="core-pulse core-pulse--1" aria-hidden="true"></span>
+        <span class="core-pulse core-pulse--2" aria-hidden="true"></span>
         <small>DATA INFRASTRUCTURE</small>
         <strong>DIMITRA</strong>
         <span>one operational layer</span>
+        <div class="core-status"><i></i> LIVE SYNC</div>
       </div>
-      <div class="sector-node n1"><i></i><span>AGRICULTURA</span></div>
-      <div class="sector-node n2"><i></i><span>GANADERÍA</span></div>
-      <div class="sector-node n3"><i></i><span>ACUICULTURA</span></div>
-      <div class="sector-node n4"><i></i><span>FLORICULTURA</span></div>
-      <div class="sector-node n5"><i></i><span>INVERNADEROS</span></div>
-      <div class="sector-node n6"><i></i><span>AVICULTURA</span></div>
+
+      <div class="telemetry-chip tc1"><small>SOIL</small><strong>34%</strong><span>moisture</span></div>
+      <div class="telemetry-chip tc2"><small>WEATHER</small><strong>18.4°</strong><span>RH 71%</span></div>
+      <div class="telemetry-chip tc3"><small>GPS</small><strong>024</strong><span>online</span></div>
+      <div class="telemetry-chip tc4"><small>NDVI</small><strong>0.73</strong><span>satellite</span></div>
+      <div class="telemetry-chip tc5"><small>FLOW</small><strong>13.2</strong><span>L/min</span></div>
+
+      <div class="sector-node n1"><b>AG</b><i></i><span>AGRICULTURA</span></div>
+      <div class="sector-node n2"><b>GV</b><i></i><span>GANADERÍA</span></div>
+      <div class="sector-node n3"><b>AQ</b><i></i><span>ACUICULTURA</span></div>
+      <div class="sector-node n4"><b>FL</b><i></i><span>FLORICULTURA</span></div>
+      <div class="sector-node n5"><b>GH</b><i></i><span>INVERNADEROS</span></div>
+      <div class="sector-node n6"><b>AV</b><i></i><span>AVICULTURA</span></div>
+
+      <div class="orbit-data-strip" aria-hidden="true">
+        <span><i></i> 128 streams</span>
+        <span>2.4M datapoints</span>
+        <span>6 systems</span>
+        <span>99.8% sync</span>
+      </div>
     </div>
   </div>
 </section>

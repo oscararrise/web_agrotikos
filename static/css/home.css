@@ -250,3 +250,208 @@
     min-height: 500px;
   }
 }
+
+
+/* Home navigation + official AgroTikos identity */
+.brand--official {
+  width: 82px;
+  height: 82px;
+  padding: 5px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 12px 36px rgba(0,0,0,.22);
+  overflow: hidden;
+}
+.brand--official img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.desktop-nav--primary {
+  justify-self: end;
+  gap: 10px;
+}
+.nav-top-btn {
+  min-height: 42px;
+  padding: 0 17px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.03);
+  color: #a7b7ae;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: .76rem;
+  transition: .25s ease;
+}
+.nav-top-btn:hover, .nav-top-btn.is-active {
+  border-color: rgba(137,240,181,.26);
+  color: #f1f3ea;
+  background: rgba(137,240,181,.07);
+}
+.nav-top-btn--future span {
+  font-size: .46rem;
+  letter-spacing: .12em;
+  color: var(--green);
+}
+.mobile-service-future {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  width:100%;
+  padding:12px 0;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  color:var(--ink);
+  font-size:clamp(2rem,6vw,4.5rem);
+  letter-spacing:-.05em;
+  text-align:left;
+}
+.mobile-service-future > span { font-size:.6rem; letter-spacing:.12em; color:var(--green); }
+.mobile-service-future small { margin-left:auto; font-size:.48rem; letter-spacing:.12em; color:#6f8578; }
+.footer-official-logo {
+  display:inline-flex;
+  width:128px;
+  padding:10px;
+  border-radius:18px;
+  background:#fff;
+}
+.footer-official-logo img { width:100%; height:auto; }
+
+/* DIMITRA advanced multisector visualization */
+.sector-orbit--advanced {
+  min-height: 720px;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid rgba(137,240,181,.07);
+  background: radial-gradient(circle at 50% 48%, rgba(23,81,50,.17), transparent 26%);
+}
+.orbit-grid {
+  position:absolute; inset:0; z-index:-4;
+  background-image:
+    linear-gradient(rgba(137,240,181,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(137,240,181,.035) 1px, transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(circle at center, black 20%, transparent 82%);
+}
+.orbit-glow {
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:520px; height:520px; border-radius:50%;
+  background:radial-gradient(circle, rgba(72,210,130,.12), rgba(31,111,72,.04) 44%, transparent 70%);
+  filter:blur(8px); z-index:-3;
+}
+.orbit-ring {
+  position:absolute; left:50%; top:50%; border-radius:50%;
+  border:1px solid rgba(137,240,181,.10);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.orbit-ring::after {
+  content:""; position:absolute; width:8px; height:8px; border-radius:50%;
+  background:#89f0b5; box-shadow:0 0 22px rgba(137,240,181,.8);
+  left:50%; top:-4px;
+}
+.orbit-ring--outer { width:590px; height:590px; border-style:dashed; animation:orbitSpin 34s linear infinite; }
+.orbit-ring--mid { width:440px; height:440px; border-color:rgba(83,215,232,.10); animation:orbitSpinReverse 25s linear infinite; }
+.orbit-ring--inner { width:315px; height:315px; animation:orbitSpin 18s linear infinite; }
+@keyframes orbitSpin { to { transform:translate(-50%,-50%) rotate(360deg); } }
+@keyframes orbitSpinReverse { to { transform:translate(-50%,-50%) rotate(-360deg); } }
+
+.orbit-network { position:absolute; inset:0; width:100%; height:100%; z-index:-1; }
+.sector-path { fill:none; stroke:rgba(137,240,181,.15); stroke-width:1.2; stroke-dasharray:7 11; animation:networkDash 9s linear infinite; }
+@keyframes networkDash { to { stroke-dashoffset:-180; } }
+.sector-signal { fill:#53d7e8; filter:drop-shadow(0 0 8px rgba(83,215,232,.85)); }
+
+.orbit-core--advanced {
+  width:238px; height:238px;
+  overflow:visible;
+  background:radial-gradient(circle at 50% 42%, rgba(103,241,165,.17), rgba(7,20,14,.97) 66%);
+  border-color:rgba(137,240,181,.38);
+  box-shadow:0 0 100px rgba(80,208,128,.12), inset 0 0 45px rgba(137,240,181,.05);
+}
+.orbit-core--advanced strong { font-size:1.72rem; letter-spacing:.16em; }
+.orbit-core--advanced > span:not(.core-scan):not(.core-pulse) { color:#5f8e74; }
+.core-scan {
+  position:absolute; left:18%; right:18%; height:1px; top:30%;
+  background:linear-gradient(90deg, transparent, #89f0b5, transparent);
+  box-shadow:0 0 18px rgba(137,240,181,.55);
+  animation:coreScan 3.4s ease-in-out infinite;
+}
+@keyframes coreScan { 0%,100%{top:28%;opacity:.2} 50%{top:70%;opacity:1} }
+.core-pulse {
+  position:absolute; inset:-24px; border-radius:50%;
+  border:1px solid rgba(137,240,181,.14);
+  animation:corePulse 3s ease-out infinite;
+}
+.core-pulse--2 { animation-delay:1.5s; }
+@keyframes corePulse { 0%{transform:scale(.88);opacity:.7} 100%{transform:scale(1.25);opacity:0} }
+.core-status {
+  margin-top:14px;
+  display:flex; align-items:center; gap:7px;
+  color:#8eb49f; font-size:.5rem; letter-spacing:.12em;
+}
+.core-status i { width:6px; height:6px; border-radius:50%; background:#89f0b5; box-shadow:0 0 12px #89f0b5; }
+
+.telemetry-chip {
+  position:absolute; z-index:3;
+  min-width:110px; padding:10px 12px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:13px;
+  background:rgba(8,22,15,.78);
+  backdrop-filter:blur(12px);
+  box-shadow:0 18px 50px rgba(0,0,0,.2);
+}
+.telemetry-chip small { display:block; color:#64806f; font-size:.48rem; letter-spacing:.12em; }
+.telemetry-chip strong { display:block; margin:4px 0 2px; font-size:.92rem; color:#eef5ef; }
+.telemetry-chip span { color:#657b70; font-size:.52rem; }
+.tc1{left:31%;top:18%}.tc2{right:27%;top:20%}.tc3{left:28%;bottom:21%}.tc4{right:25%;bottom:22%}.tc5{right:8%;top:43%}
+
+.sector-node {
+  z-index:4; min-width:132px; justify-content:flex-start;
+  background:rgba(12,30,20,.82);
+  box-shadow:0 12px 35px rgba(0,0,0,.16);
+}
+.sector-node b {
+  display:grid; place-items:center; width:24px; height:24px; border-radius:8px;
+  background:rgba(137,240,181,.07); color:#88caa5; font-size:.48rem; letter-spacing:.06em;
+}
+.sector-node i { margin-left:auto; }
+.orbit-data-strip {
+  position:absolute; left:50%; bottom:18px; transform:translateX(-50%);
+  width:min(620px,90%); display:grid; grid-template-columns:repeat(4,1fr);
+  border:1px solid rgba(255,255,255,.07); border-radius:14px;
+  background:rgba(5,16,10,.66); backdrop-filter:blur(12px);
+}
+.orbit-data-strip span {
+  padding:11px 13px; text-align:center; color:#657e70; font-size:.53rem; letter-spacing:.07em;
+  border-right:1px solid rgba(255,255,255,.06);
+}
+.orbit-data-strip span:last-child { border-right:0; }
+.orbit-data-strip i { display:inline-block; width:5px; height:5px; border-radius:50%; background:#89f0b5; margin-right:5px; box-shadow:0 0 10px #89f0b5; }
+
+@media (max-width:800px) {
+  .brand--official { width:62px; height:62px; border-radius:14px; }
+  .desktop-nav--primary { display:none; }
+  .sector-orbit--advanced { min-height:600px; border-radius:24px; }
+  .orbit-ring--outer { width:470px; height:470px; }
+  .orbit-ring--mid { width:355px; height:355px; }
+  .orbit-ring--inner { width:250px; height:250px; }
+  .orbit-core--advanced { width:180px; height:180px; }
+  .telemetry-chip { transform:scale(.82); }
+  .tc1{left:18%;top:20%}.tc2{right:14%;top:21%}.tc3{left:15%;bottom:22%}.tc4{right:13%;bottom:23%}.tc5{display:none}
+  .orbit-data-strip { grid-template-columns:1fr 1fr; bottom:10px; }
+  .orbit-data-strip span:nth-child(2){border-right:0}.orbit-data-strip span:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.06)}
+}
+@media (max-width:520px) {
+  .sector-orbit--advanced { min-height:560px; margin-left:-10px; margin-right:-10px; }
+  .telemetry-chip { display:none; }
+  .orbit-ring--outer { width:390px; height:390px; }
+  .orbit-ring--mid { width:300px; height:300px; }
+  .orbit-ring--inner { width:220px; height:220px; }
+  .orbit-core--advanced { width:160px; height:160px; }
+  .sector-node { min-width:112px; padding:7px 9px; }
+  .sector-node b { width:20px; height:20px; }
+}
