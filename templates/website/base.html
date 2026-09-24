@@ -44,8 +44,11 @@
   </div>
 
   <header class="site-header" id="siteHeader">
-    <a class="brand brand--official" href="#inicio" aria-label="AgroTikos, inicio">
-      <img src="{% static 'img/agrotikos-logo.png' %}" alt="AgroTikos Technology">
+    <a class="brand brand--refined" href="#inicio" aria-label="AgroTikos, inicio">
+      <span class="brand-name" aria-hidden="true">
+        <span class="brand-name__agro">Agro</span><span class="brand-name__tikos">Tikos</span>
+      </span>
+      <span class="brand-subtitle">TECHNOLOGY</span>
     </a>
 
     <nav class="desktop-nav desktop-nav--primary" aria-label="Navegación principal">
@@ -65,8 +68,11 @@
   <main id="contenido">{% block content %}{% endblock %}</main>
 
   <footer class="site-footer site-footer--minimal">
-    <a class="footer-official-logo" href="#inicio" aria-label="AgroTikos">
-      <img src="{% static 'img/agrotikos-logo.png' %}" alt="AgroTikos Technology">
+    <a class="brand brand--refined brand--footer-refined" href="#inicio" aria-label="AgroTikos">
+      <span class="brand-name" aria-hidden="true">
+        <span class="brand-name__agro">Agro</span><span class="brand-name__tikos">Tikos</span>
+      </span>
+      <span class="brand-subtitle">TECHNOLOGY</span>
     </a>
     <p>Tecnología inteligente para el campo.</p>
     <div class="footer-meta">
