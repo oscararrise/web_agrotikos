@@ -1,10 +1,10 @@
 # AgroTikos Web
 
-Sitio corporativo de AgroTikos y DEMETER, construido con Django templates, CSS moderno, JavaScript ES6 y animaciones progresivas con GSAP.
+Sitio corporativo de AgroTikos y DIMITRA, construido con Django templates, CSS moderno, JavaScript ES6 y animaciones progresivas con GSAP.
 
 ## Objetivo
 
-Comunicar a AgroTikos como una empresa AgTech que construye infraestructura de datos para sistemas agropecuarios. El sitio presenta agricultura de precisión, ganadería conectada, acuicultura inteligente y DEMETER como una capa transversal de captura, histórico, contexto, inteligencia y acción.
+Comunicar a AgroTikos como una empresa AgTech que construye infraestructura de datos para sistemas agropecuarios. El sitio presenta agricultura de precisión, ganadería conectada, acuicultura inteligente y DIMITRA como una capa transversal de captura, histórico, contexto, inteligencia y acción.
 
 ## Stack
 
