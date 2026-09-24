@@ -692,9 +692,9 @@
 .services-intro h2{
   margin:18px 0 0;
   max-width:980px;
-  font-size:clamp(3.6rem,6.7vw,8rem);
-  line-height:.9;
-  letter-spacing:-.07em;
+  font-size:clamp(2.8rem,4.8vw,5.6rem);
+  line-height:.95;
+  letter-spacing:-.055em;
   font-weight:580;
 }
 .services-intro h2 em{font-style:normal;color:#8fdc3d}
@@ -705,8 +705,8 @@
 .services-intro__copy>p{
   margin:0;
   color:#91a298;
-  font-size:1.02rem;
-  line-height:1.8;
+  font-size:.94rem;
+  line-height:1.72;
 }
 .services-flow{
   margin-top:34px;
@@ -839,17 +839,17 @@
 .service-chapter__copy h3{
   margin:25px 0 28px;
   max-width:680px;
-  font-size:clamp(3rem,4.3vw,5.5rem);
-  line-height:.93;
-  letter-spacing:-.062em;
+  font-size:clamp(2.35rem,3.35vw,4.1rem);
+  line-height:.98;
+  letter-spacing:-.048em;
   font-weight:560;
 }
 .service-chapter__copy>p{
   max-width:640px;
   margin:0;
   color:#899c91;
-  font-size:1rem;
-  line-height:1.8;
+  font-size:.92rem;
+  line-height:1.72;
 }
 .service-capabilities{
   display:flex;
@@ -1027,7 +1027,7 @@
 .services-cta>span{font-size:.57rem;letter-spacing:.16em;color:#8fdc3d}
 .services-cta h3{
   max-width:1160px;margin:24px auto 38px;
-  font-size:clamp(2.8rem,5.2vw,6.2rem);line-height:.95;letter-spacing:-.06em;font-weight:560
+  font-size:clamp(2.25rem,3.8vw,4.5rem);line-height:.98;letter-spacing:-.05em;font-weight:560
 }
 .services-cta .btn{margin-top:6px}
 
@@ -1043,12 +1043,12 @@
 }
 @media (max-width:700px){
   .services-intro{padding:90px 22px 70px}
-  .services-intro h2{font-size:clamp(3.2rem,16vw,5.2rem)}
+  .services-intro h2{font-size:clamp(2.75rem,13vw,4.5rem)}
   .services-flow{gap:8px}
   .services-flow i{width:18px}
   .service-chapter__visual{min-height:510px}
   .service-chapter__copy{min-height:0;padding:62px 22px 72px}
-  .service-chapter__copy h3{font-size:clamp(2.8rem,13vw,4.4rem)}
+  .service-chapter__copy h3{font-size:clamp(2.25rem,10.5vw,3.6rem)}
   .visual-hud--top{top:18px;right:18px}
   .visual-hud--bottom{left:18px;bottom:18px}
   .visual-coordinate{right:18px;bottom:21px;display:none}
@@ -1057,7 +1057,7 @@
   .platform-source{width:102px;padding:9px}
   .ps1,.ps2{left:4%}.ps3,.ps4{right:4%}
   .services-cta{padding:85px 22px;min-height:65svh}
-  .services-cta h3{font-size:clamp(2.8rem,13vw,4.8rem)}
+  .services-cta h3{font-size:clamp(2.2rem,10.5vw,3.8rem)}
 }
 
 
@@ -1105,9 +1105,9 @@
 .services-page-hero h1{
   max-width:1150px;
   margin:20px 0 30px;
-  font-size:clamp(4rem,7.4vw,8.8rem);
-  line-height:.88;
-  letter-spacing:-.075em;
+  font-size:clamp(3.2rem,5.6vw,6.7rem);
+  line-height:.94;
+  letter-spacing:-.06em;
   font-weight:570;
 }
 .services-page-hero h1 em{font-style:normal;color:#8fdc3d}
@@ -1115,8 +1115,8 @@
   max-width:720px;
   margin:0;
   color:#91a298;
-  font-size:1.05rem;
-  line-height:1.8;
+  font-size:.95rem;
+  line-height:1.72;
 }
 .services-page-hero__scroll{
   position:absolute;z-index:3;right:max(5vw,calc((100vw - var(--max))/2));bottom:100px;
@@ -1138,7 +1138,7 @@
     padding:130px 22px 80px;
     align-items:center;
   }
-  .services-page-hero h1{font-size:clamp(3.6rem,17vw,5.6rem)}
+  .services-page-hero h1{font-size:clamp(3rem,14vw,4.8rem)}
   .services-page-hero__scroll{left:22px;right:auto;bottom:34px}
   .services-page-hero__glow{width:330px;height:330px;right:-110px;top:18%}
 }
