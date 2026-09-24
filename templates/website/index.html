@@ -27,10 +27,14 @@
       <path class="data-path" d="M135 485 C220 470 270 355 370 330"/>
       <path class="data-path" d="M610 125 C540 160 510 270 395 320"/>
       <path class="data-path" d="M625 490 C545 445 515 365 395 335"/>
+      <path class="data-path data-path--secondary" d="M210 95 C290 145 320 250 375 315"/>
+      <path class="data-path data-path--secondary" d="M555 560 C505 475 470 390 392 340"/>
       <circle class="signal signal-a" cx="90" cy="140" r="4"/>
       <circle class="signal signal-b" cx="135" cy="485" r="4"/>
       <circle class="signal signal-c" cx="610" cy="125" r="4"/>
       <circle class="signal signal-d" cx="625" cy="490" r="4"/>
+      <circle class="signal signal-e" cx="210" cy="95" r="3.5"/>
+      <circle class="signal signal-f" cx="555" cy="560" r="3.5"/>
     </svg>
 
     <div class="source-node source-node--field" data-float="1">
@@ -46,10 +50,33 @@
       <span class="node-kicker">SATÉLITE</span><strong>NDVI 0.73</strong><small>Escena procesada</small><b class="pulse"></b>
     </div>
 
+    <div class="source-node source-node--rain" data-float="5">
+      <span class="node-kicker">LLUVIOMETRÍA</span><strong>2.4 mm</strong><small>Última hora · tendencia ↑</small><b class="pulse"></b>
+    </div>
+    <div class="source-node source-node--wind" data-float="6">
+      <span class="node-kicker">VIENTO</span><strong>8 km/h</strong><small>NE · ráfaga 13 km/h</small><b class="pulse"></b>
+    </div>
+
+    <div class="hero-radar hero-radar--a" aria-hidden="true"></div>
+    <div class="hero-radar hero-radar--b" aria-hidden="true"></div>
+
+    <div class="hero-kpi hero-kpi--radiation"><small>RADIACIÓN</small><strong>682 W/m²</strong><span>solar</span></div>
+    <div class="hero-kpi hero-kpi--flow"><small>RIEGO</small><strong>13.2 L/min</strong><span>válvula activa</span></div>
+    <div class="hero-kpi hero-kpi--sync"><small>SISTEMA</small><strong>6/6</strong><span>sensores online</span></div>
+
     <div class="dimitra-core hero-core">
       <span class="core-orbit core-orbit--1"></span>
       <span class="core-orbit core-orbit--2"></span>
+      <span class="hero-core-scan" aria-hidden="true"></span>
       <div class="core-mark"><small>DATA LAYER</small><strong>DIMITRA</strong><span>operational intelligence</span></div>
+      <div class="hero-core-status"><i></i> LIVE DATA</div>
+    </div>
+
+    <div class="hero-telemetry" aria-hidden="true">
+      <div><span>SOIL</span><b>34%</b></div>
+      <div><span>RH</span><b>71%</b></div>
+      <div><span>RAIN</span><b>2.4</b></div>
+      <div><span>WIND</span><b>8</b></div>
     </div>
   </div>
 
@@ -125,6 +152,20 @@
         <span>6 systems</span>
         <span>99.8% sync</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-contact" id="contacto">
+  <div class="home-contact__inner">
+    <div>
+      <span>HABLEMOS</span>
+      <h2>Construyamos el próximo caso de uso.</h2>
+    </div>
+    <div class="home-contact__actions">
+      <a href="mailto:info@agrotikos.com">info@agrotikos.com</a>
+      <a href="tel:+573002089320">+57 300 208 9320</a>
+      <span>Colombia · 2026</span>
     </div>
   </div>
 </section>

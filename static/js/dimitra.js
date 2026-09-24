@@ -27,6 +27,28 @@
 
   const initHero = () => {
     animateAlongPaths('.data-path', '.signal', 3.5);
+    if (reducedMotion || !window.gsap) return;
+
+    gsap.to('.hero-radar--a', { rotation:360, duration:14, repeat:-1, ease:'none' });
+    gsap.to('.hero-radar--b', { rotation:-360, duration:18, repeat:-1, ease:'none' });
+
+    gsap.utils.toArray('.hero-kpi').forEach((el, index) => {
+      gsap.to(el, {
+        y: index % 2 ? 8 : -8,
+        duration: 2.5 + index * .35,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+    });
+
+    gsap.to('.hero-telemetry', {
+      y: -5,
+      duration: 2.6,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
   };
 
   const initDimitraOrbit = () => {
