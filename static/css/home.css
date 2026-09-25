@@ -454,7 +454,18 @@
 .telemetry-chip small { display:block; color:#64806f; font-size:.48rem; letter-spacing:.12em; }
 .telemetry-chip strong { display:block; margin:4px 0 2px; font-size:.92rem; color:#eef5ef; }
 .telemetry-chip span { color:#657b70; font-size:.52rem; }
-.tc1{left:31%;top:18%}.tc2{right:27%;top:20%}.tc3{left:28%;bottom:21%}.tc4{right:25%;bottom:22%}.tc5{right:8%;top:43%}
+.tc1{left:31%;top:18%}
+.tc2{right:27%;top:20%}
+.tc3{left:28%;bottom:21%}
+.tc4{right:25%;bottom:22%}
+.tc5{right:8%;top:43%}
+.tc6{left:8%;top:42%}
+.tc7{left:18%;top:29%}
+.tc8{right:15%;top:31%}
+.tc9{left:17%;bottom:30%}
+.tc10{right:14%;bottom:31%}
+.tc11{left:38%;bottom:10%}
+.tc12{right:38%;top:8%}
 
 .sector-node {
   z-index:4; min-width:132px; justify-content:flex-start;
@@ -488,7 +499,7 @@
   .orbit-ring--inner { width:250px; height:250px; }
   .orbit-core--advanced { width:180px; height:180px; }
   .telemetry-chip { transform:scale(.82); }
-  .tc1{left:18%;top:20%}.tc2{right:14%;top:21%}.tc3{left:15%;bottom:22%}.tc4{right:13%;bottom:23%}.tc5{display:none}
+  .tc1{left:18%;top:20%}.tc2{right:14%;top:21%}.tc3{left:15%;bottom:22%}.tc4{right:13%;bottom:23%}.tc5,.tc6,.tc7,.tc8,.tc9,.tc10,.tc11,.tc12{display:none}
   .orbit-data-strip { grid-template-columns:1fr 1fr; bottom:10px; }
   .orbit-data-strip span:nth-child(2){border-right:0}.orbit-data-strip span:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.06)}
 }
