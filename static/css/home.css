@@ -1165,3 +1165,196 @@
     font-size: clamp(2rem, 9vw, 3.2rem);
   }
 }
+
+
+/* ===== Services visual upgrade · livestock / water / DIMITRA / founders ===== */
+.fence-crossline{
+  fill:none;
+  stroke:rgba(151,207,125,.14);
+  stroke-width:1.3;
+  stroke-dasharray:5 10;
+}
+.animal-instance{color:#dce9df}
+.animal-body,.horse-body,.sheep-body{
+  fill:rgba(224,239,228,.12);
+  stroke:rgba(174,224,166,.56);
+  stroke-width:1.5;
+}
+.animal-head{
+  fill:rgba(214,233,219,.15);
+  stroke:rgba(174,224,166,.62);
+  stroke-width:1.4;
+}
+.animal-leg,.animal-horn,.horse-neck{
+  fill:none;
+  stroke:rgba(174,224,166,.58);
+  stroke-width:1.6;
+  stroke-linecap:round;
+}
+.sheep-body{stroke-dasharray:2 2}
+.animal-signal-dot{
+  fill:#8fdc3d;
+  filter:drop-shadow(0 0 7px rgba(143,220,61,.92));
+}
+.animal-signal-ring{
+  fill:none;
+  stroke:rgba(143,220,61,.42);
+  stroke-width:1.5;
+  animation:animalSignal 2.8s ease-out infinite;
+  transform-box:fill-box;
+  transform-origin:center;
+}
+@keyframes animalSignal{
+  0%{transform:scale(.4);opacity:.95}
+  100%{transform:scale(2.1);opacity:0}
+}
+.herd-status{
+  position:absolute;z-index:5;right:26px;bottom:28px;
+  min-width:210px;padding:12px 14px;border:1px solid rgba(255,255,255,.08);
+  background:rgba(6,16,10,.72);backdrop-filter:blur(12px);
+  display:grid;gap:5px;color:#82988b;font-size:.5rem;letter-spacing:.08em;
+}
+.herd-status span:first-child{color:#b8cdbd}
+.herd-status i{
+  display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;
+  background:#8fdc3d;box-shadow:0 0 10px rgba(143,220,61,.8)
+}
+
+/* Smart pond scene */
+.pond-landscape{position:absolute;inset:0;overflow:hidden}
+.pond-bank{
+  position:absolute;left:-8%;width:116%;border-radius:50%;
+  background:linear-gradient(180deg,rgba(69,97,57,.26),rgba(24,49,34,.45));
+  border:1px solid rgba(122,170,105,.12);
+}
+.pond-bank--back{top:13%;height:34%;transform:perspective(700px) rotateX(66deg)}
+.pond-bank--front{bottom:-10%;height:42%;transform:perspective(700px) rotateX(58deg);opacity:.75}
+.pond-basin{
+  position:absolute;left:8%;right:8%;top:21%;height:54%;
+  overflow:hidden;border-radius:50%;
+  transform:perspective(800px) rotateX(58deg);
+  background:linear-gradient(180deg,#165762 0,#0b3942 55%,#08242b 100%);
+  border:1px solid rgba(142,235,225,.28);
+  box-shadow:inset 0 0 90px rgba(69,210,213,.12),0 20px 70px rgba(0,0,0,.28);
+}
+.pond-basin .water-surface{
+  top:-15%;left:-12%;width:124%;height:125%;transform:none;border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 28%,rgba(165,245,232,.13),transparent 18%),
+    repeating-radial-gradient(ellipse at 50% 48%,transparent 0 22px,rgba(177,245,237,.08) 23px 24px);
+}
+.pond-basin .water-caustics{inset:0;height:100%}
+.pond-reflection{
+  position:absolute;inset:0;
+  background:linear-gradient(115deg,transparent 20%,rgba(185,255,245,.08) 42%,transparent 62%);
+  animation:pondReflection 8s ease-in-out infinite alternate;
+}
+@keyframes pondReflection{to{transform:translateX(12%) skewX(-5deg)}}
+.pond-inlet,.pond-outlet{
+  position:absolute;z-index:4;height:18px;border-radius:12px;
+  border:1px solid rgba(83,215,232,.24);background:rgba(6,37,45,.82);overflow:hidden;
+}
+.pond-inlet{left:7%;top:34%;width:24%}
+.pond-outlet{right:7%;bottom:24%;width:20%}
+.pond-inlet span,.pond-outlet span{
+  position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(83,215,232,.14),transparent);
+}
+.pond-inlet i,.pond-outlet i{
+  position:absolute;top:6px;left:-8px;width:6px;height:6px;border-radius:50%;
+  background:#53d7e8;box-shadow:0 0 10px rgba(83,215,232,.7);animation:pondFlow 2.8s linear infinite;
+}
+.pond-inlet i:nth-of-type(2){animation-delay:-.9s}.pond-inlet i:nth-of-type(3){animation-delay:-1.8s}
+@keyframes pondFlow{to{left:110%}}
+.pond-aerator{
+  position:absolute;z-index:4;left:53%;top:41%;width:90px;height:90px;
+  transform:translate(-50%,-50%);
+}
+.pond-aerator b{
+  position:absolute;left:50%;top:50%;width:24px;height:24px;border-radius:50%;
+  transform:translate(-50%,-50%);background:#d9efe9;border:4px solid rgba(83,215,232,.24);
+  box-shadow:0 0 25px rgba(83,215,232,.18)
+}
+.pond-aerator i{
+  position:absolute;left:50%;top:50%;width:70px;height:70px;border-radius:50%;
+  border:1px solid rgba(191,245,239,.18);transform:translate(-50%,-50%);
+  animation:aeratorRipple 3s ease-out infinite;
+}
+.pond-aerator i:nth-of-type(2){animation-delay:-1s}.pond-aerator i:nth-of-type(3){animation-delay:-2s}
+@keyframes aeratorRipple{0%{transform:translate(-50%,-50%) scale(.2);opacity:1}100%{transform:translate(-50%,-50%) scale(1.8);opacity:0}}
+.fish--4{right:30%;bottom:26%;transform:scale(.62);animation:fishSwim2 12s ease-in-out infinite alternate-reverse}
+.water-saving-card,.pond-level-card,.pond-flow-card{
+  position:absolute;z-index:6;padding:12px 14px;
+  border:1px solid rgba(255,255,255,.09);background:rgba(5,20,23,.8);backdrop-filter:blur(14px);
+  box-shadow:0 20px 50px rgba(0,0,0,.18)
+}
+.water-saving-card{left:28px;bottom:28px;width:190px}
+.pond-level-card{right:26px;top:28%;width:132px}
+.pond-flow-card{right:28px;bottom:22%;width:150px}
+.water-saving-card small,.pond-level-card small,.pond-flow-card small{
+  display:block;font-size:.45rem;letter-spacing:.13em;color:#5e98a0
+}
+.water-saving-card strong,.pond-level-card strong,.pond-flow-card strong{
+  display:block;margin:5px 0 3px;color:#e3f4f2;font-size:1.05rem
+}
+.water-saving-card span,.pond-level-card span,.pond-flow-card span{font-size:.48rem;color:#6f959b}
+.water-saving-card>div{height:4px;margin-top:10px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+.water-saving-card>div i{display:block;height:100%;background:linear-gradient(90deg,#53d7e8,#8fdc3d);box-shadow:0 0 12px rgba(83,215,232,.3)}
+
+/* DIMITRA module cloud */
+.platform-module{
+  position:absolute;z-index:4;padding:7px 9px;border-radius:999px;
+  border:1px solid rgba(143,220,61,.11);
+  background:rgba(8,21,14,.72);backdrop-filter:blur(10px);
+  color:#799184;font-size:.43rem;letter-spacing:.09em;white-space:nowrap;
+  box-shadow:0 10px 28px rgba(0,0,0,.14);
+}
+.pm1{left:25%;top:11%}.pm2{left:42%;top:8%}.pm3{right:22%;top:12%}.pm4{right:10%;top:37%}
+.pm5{right:13%;bottom:29%}.pm6{right:27%;bottom:12%}.pm7{left:42%;bottom:8%}.pm8{left:21%;bottom:14%}
+.pm9{left:10%;bottom:32%}.pm10{left:12%;top:34%}
+
+/* Founders contact */
+.founders-contact{
+  position:relative;padding:110px 5vw 90px;overflow:hidden;
+  background:
+    radial-gradient(circle at 16% 22%,rgba(143,220,61,.08),transparent 28%),
+    radial-gradient(circle at 82% 72%,rgba(83,215,232,.06),transparent 30%),
+    #07110c;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.founders-contact__inner{max-width:1280px;margin:0 auto}
+.founders-contact__intro{max-width:900px}
+.founders-contact__intro h2{
+  margin:14px 0 22px;max-width:980px;
+  font-size:clamp(2.7rem,5.4vw,6.2rem);line-height:.94;letter-spacing:-.055em;font-weight:570
+}
+.founders-contact__intro p{max-width:760px;color:#879a90;line-height:1.75;font-size:1rem}
+.founders-contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:55px}
+.founder-card{
+  min-height:300px;padding:34px;border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(145deg,rgba(16,34,23,.82),rgba(7,17,12,.88));
+  border-radius:22px;display:flex;flex-direction:column;align-items:flex-start
+}
+.founder-card--company{background:linear-gradient(145deg,rgba(13,36,31,.82),rgba(7,17,12,.88))}
+.founder-card__eyebrow{font-size:.52rem;letter-spacing:.14em;color:#8fdc3d}
+.founder-card h3{margin:18px 0 12px;font-size:clamp(1.8rem,3vw,3rem);letter-spacing:-.04em}
+.founder-card p{max-width:560px;color:#83958c;line-height:1.7;margin:0 0 28px}
+.founder-card__links{display:grid;gap:8px;margin-top:auto}
+.founder-card__links a{color:#c6d5cc;font-size:.82rem}
+.founder-card__links a:hover{color:#8fdc3d}
+.founder-card .btn{margin-top:auto}
+.founders-contact__meta{
+  margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);
+  display:flex;gap:18px;flex-wrap:wrap;color:#596e63;font-size:.55rem;letter-spacing:.1em
+}
+
+@media (max-width:900px){
+  .platform-module{display:none}
+  .founders-contact__grid{grid-template-columns:1fr}
+  .pond-level-card,.pond-flow-card{display:none}
+  .herd-status{right:18px;bottom:18px}
+}
+@media (max-width:600px){
+  .founders-contact{padding:80px 22px 70px}
+  .water-saving-card{left:18px;bottom:18px;width:160px}
+  .herd-status{display:none}
+}
