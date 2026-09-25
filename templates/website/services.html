@@ -78,33 +78,114 @@
         </div>
         <div class="service-outcome"><small>VISIBILIDAD DEL REBAÑO</small><strong>Seguir movimientos, identificar eventos y construir históricos por animal.</strong></div>
       </div>
-      <div class="service-chapter__visual service-chapter__visual--synthetic reveal" aria-label="Visualización conceptual de monitoreo pecuario">
+      <div class="service-chapter__visual service-chapter__visual--synthetic reveal" aria-label="Visualización conceptual de monitoreo pecuario con vacas, ovejas y caballos dentro de una cerca virtual">
         <div class="pasture-grid" aria-hidden="true"></div>
         <svg class="livestock-map" viewBox="0 0 900 660" aria-hidden="true">
-          <path class="pasture-border" d="M90 100 L420 65 L810 145 L755 545 L430 610 L110 515 Z"/>
-          <path class="virtual-fence-web" d="M185 205 C320 125 570 145 695 245 C785 320 735 460 590 500 C435 545 230 490 170 360 C145 305 145 250 185 205 Z"/>
-          <path class="animal-route" d="M270 405 C320 365 322 290 390 274 C455 258 470 337 535 314 C585 296 610 243 665 225"/>
-          <circle class="livestock-dot ld1" cx="270" cy="405" r="7"/><circle class="livestock-dot ld2" cx="390" cy="274" r="7"/>
-          <circle class="livestock-dot ld3" cx="535" cy="314" r="7"/><circle class="livestock-dot ld4" cx="665" cy="225" r="7"/>
-          <circle class="livestock-pulse" cx="535" cy="314" r="28"/>
+          <defs>
+            <g id="cow-marker">
+              <ellipse class="animal-body" cx="0" cy="0" rx="24" ry="13"/>
+              <circle class="animal-head" cx="28" cy="-4" r="8"/>
+              <path class="animal-leg" d="M-14 9v18M8 10v18M22 5v17"/>
+              <path class="animal-horn" d="M30 -11l6 -5M26 -11l-4 -6"/>
+              <circle class="animal-signal-dot" cx="0" cy="-31" r="4"/>
+              <circle class="animal-signal-ring" cx="0" cy="-31" r="12"/>
+            </g>
+            <g id="sheep-marker">
+              <path class="sheep-body" d="M-19 2c0-11 9-18 20-18s20 7 20 18-9 17-20 17-20-6-20-17z"/>
+              <circle class="animal-head" cx="24" cy="2" r="7"/>
+              <path class="animal-leg" d="M-10 14v14M10 14v14"/>
+              <circle class="animal-signal-dot" cx="0" cy="-30" r="4"/>
+              <circle class="animal-signal-ring" cx="0" cy="-30" r="12"/>
+            </g>
+            <g id="horse-marker">
+              <ellipse class="horse-body" cx="0" cy="0" rx="27" ry="11"/>
+              <path class="horse-neck" d="M18 -6l15 -24 9 6-9 27"/>
+              <circle class="animal-head" cx="37" cy="-28" r="7"/>
+              <path class="animal-leg" d="M-14 8l-5 23M8 9l4 22M23 5l5 20"/>
+              <circle class="animal-signal-dot" cx="0" cy="-34" r="4"/>
+              <circle class="animal-signal-ring" cx="0" cy="-34" r="12"/>
+            </g>
+          </defs>
+
+          <path class="pasture-border" d="M80 105 L430 65 L820 145 L770 555 L435 610 L95 520 Z"/>
+          <path class="virtual-fence-web" d="M155 190 C285 115 585 125 728 226 C815 288 793 452 632 520 C464 590 220 520 142 378 C105 310 105 238 155 190 Z"/>
+          <path class="fence-crossline" d="M145 378 C305 325 518 360 768 300"/>
+          <path class="animal-route" d="M205 430 C292 375 350 414 420 342 C487 273 558 330 650 255"/>
+
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(225 240) scale(.95)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(330 305) scale(.82)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(455 235) scale(1.05)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(560 365) scale(.9)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(665 285) scale(.78)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(285 450) scale(.78)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(510 470) scale(.86)"/>
+          <use href="#cow-marker" class="animal-instance cow" transform="translate(685 430) scale(.72)"/>
+
+          <use href="#sheep-marker" class="animal-instance sheep" transform="translate(390 430) scale(.7)"/>
+          <use href="#sheep-marker" class="animal-instance sheep" transform="translate(610 205) scale(.68)"/>
+          <use href="#sheep-marker" class="animal-instance sheep" transform="translate(190 350) scale(.65)"/>
+
+          <use href="#horse-marker" class="animal-instance horse" transform="translate(385 185) scale(.78)"/>
+          <use href="#horse-marker" class="animal-instance horse" transform="translate(610 470) scale(.72)"/>
         </svg>
-        <div class="visual-hud visual-hud--top"><span>ANIMAL 024</span><strong>ONLINE</strong><small>último ping · 42 s</small></div>
-        <div class="visual-hud visual-hud--bottom"><span>GEOCERCA</span><strong>ACTIVA</strong><small>perímetro 2.8 km</small></div>
+
+        <div class="herd-status">
+          <span><i></i> 13 animales conectados</span>
+          <span>8 vacas · 3 ovejas · 2 caballos</span>
+        </div>
+        <div class="visual-hud visual-hud--top"><span>ANIMAL 024</span><strong>ONLINE</strong><small>GPS · actividad normal</small></div>
+        <div class="visual-hud visual-hud--bottom"><span>GEOCERCA</span><strong>ACTIVA</strong><small>potrero 03 · perímetro monitoreado</small></div>
         <div class="map-label ml1">NORTE</div><div class="map-label ml2">BEBEDERO</div><div class="map-label ml3">POTRERO 03</div>
       </div>
     </article>
 
     <article class="service-chapter service-chapter--aqua" data-service="aqua">
-      <div class="service-chapter__visual service-chapter__visual--water reveal" aria-label="Visualización conceptual de monitoreo acuícola">
-        <div class="water-surface" aria-hidden="true"></div>
-        <div class="water-caustics" aria-hidden="true"></div>
+      <div class="service-chapter__visual service-chapter__visual--water reveal" aria-label="Vista conceptual de un estanque inteligente con sensores, flujo, nivel y ahorro de agua">
+        <div class="pond-landscape" aria-hidden="true">
+          <div class="pond-bank pond-bank--back"></div>
+          <div class="pond-bank pond-bank--front"></div>
+          <div class="pond-basin">
+            <div class="water-surface"></div>
+            <div class="water-caustics"></div>
+            <div class="pond-reflection"></div>
+          </div>
+        </div>
+
+        <div class="pond-inlet" aria-hidden="true"><span></span><i></i><i></i><i></i></div>
+        <div class="pond-outlet" aria-hidden="true"><span></span><i></i></div>
+        <div class="pond-aerator" aria-hidden="true"><b></b><i></i><i></i><i></i></div>
         <div class="aqua-probe" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-        <div class="fish fish--1" aria-hidden="true"></div><div class="fish fish--2" aria-hidden="true"></div><div class="fish fish--3" aria-hidden="true"></div>
+
+        <div class="fish fish--1" aria-hidden="true"></div>
+        <div class="fish fish--2" aria-hidden="true"></div>
+        <div class="fish fish--3" aria-hidden="true"></div>
+        <div class="fish fish--4" aria-hidden="true"></div>
+
+        <div class="water-saving-card">
+          <small>EFICIENCIA HÍDRICA</small>
+          <strong>28%</strong>
+          <span>menos agua vs. línea base</span>
+          <div><i style="width:72%"></i></div>
+        </div>
+
+        <div class="pond-level-card">
+          <small>NIVEL</small>
+          <strong>74%</strong>
+          <span>1.48 m · estable</span>
+        </div>
+
+        <div class="pond-flow-card">
+          <small>CAUDAL</small>
+          <strong>13.2 L/min</strong>
+          <span>entrada controlada</span>
+        </div>
+
         <svg class="aqua-wave-chart" viewBox="0 0 900 660" aria-hidden="true">
-          <path class="aqua-chart-line" d="M80 455 C150 430 190 475 255 445 S360 390 430 420 S535 490 610 442 S735 385 825 414"/>
+          <path class="aqua-chart-line" d="M80 470 C160 425 215 458 280 432 S380 392 452 417 S555 468 640 432 S735 394 825 410"/>
         </svg>
-        <div class="visual-hud visual-hud--top"><span>O₂ DISUELTO</span><strong>6.8 mg/L</strong><small>estable</small></div>
-        <div class="visual-hud visual-hud--bottom"><span>TEMP. AGUA</span><strong>24.6 °C</strong><small>profundidad · 1.2 m</small></div>
+
+        <div class="visual-hud visual-hud--top"><span>O₂ DISUELTO</span><strong>6.8 mg/L</strong><small>estable · aireación activa</small></div>
+        <div class="visual-hud visual-hud--bottom"><span>TEMP. AGUA</span><strong>24.6 °C</strong><small>pH 7.2 · turbidez normal</small></div>
         <div class="aqua-depth"><span>0 m</span><span>1 m</span><span>2 m</span></div>
       </div>
       <div class="service-chapter__copy reveal">
@@ -134,11 +215,23 @@
           <path d="M150 160 C275 160 315 265 440 320"/><path d="M150 500 C280 495 325 392 440 338"/>
           <path d="M750 160 C630 160 585 265 462 320"/><path d="M750 500 C625 490 580 390 462 338"/>
         </svg>
-        <div class="platform-source ps1"><i></i><span>SENSORES</span><b>128</b></div>
+        <div class="platform-source ps1"><i></i><span>SENSORES IoT</span><b>LIVE</b></div>
         <div class="platform-source ps2"><i></i><span>SATÉLITE</span><b>NDVI</b></div>
-        <div class="platform-source ps3"><i></i><span>OPERACIÓN</span><b>API</b></div>
+        <div class="platform-source ps3"><i></i><span>APIs</span><b>SYNC</b></div>
         <div class="platform-source ps4"><i></i><span>CLIMA</span><b>LIVE</b></div>
-        <div class="platform-brain"><div class="brain-orbit"></div><small>OPERATIONAL DATA LAYER</small><strong>DIMITRA</strong><span>INGEST · STORE · ANALYZE · ACT</span></div>
+
+        <div class="platform-module pm1">RIEGO</div>
+        <div class="platform-module pm2">GANADO</div>
+        <div class="platform-module pm3">ACUICULTURA</div>
+        <div class="platform-module pm4">ALERTAS</div>
+        <div class="platform-module pm5">HISTÓRICO</div>
+        <div class="platform-module pm6">DASHBOARDS</div>
+        <div class="platform-module pm7">AUTOMATIZACIÓN</div>
+        <div class="platform-module pm8">TRAZABILIDAD</div>
+        <div class="platform-module pm9">IA / ML</div>
+        <div class="platform-module pm10">REPORTES</div>
+
+        <div class="platform-brain"><div class="brain-orbit"></div><small>OPERATIONAL DATA LAYER</small><strong>DIMITRA</strong><span>CAPTURE · STORE · ANALYZE · ACT</span></div>
         <div class="data-packet dp1"></div><div class="data-packet dp2"></div><div class="data-packet dp3"></div><div class="data-packet dp4"></div>
       </div>
     </article>
@@ -151,16 +244,37 @@
   </div>
 </section>
 
-  <section class="home-contact" id="contacto">
-    <div class="home-contact__inner">
-      <div>
-        <span>HABLEMOS</span>
-        <h2>Construyamos el próximo caso de uso.</h2>
+  <section class="founders-contact" id="contacto">
+    <div class="founders-contact__inner">
+      <div class="founders-contact__intro reveal">
+        <span class="section-number">CONTACTO · FUNDADORES</span>
+        <h2>Construyamos tu próximo caso de éxito.</h2>
+        <p>Cuéntanos qué quieres medir, automatizar o entender mejor de tu operación. Diseñamos la infraestructura tecnológica desde el problema real de campo.</p>
       </div>
-      <div class="home-contact__actions">
-        <a href="mailto:info@agrotikos.com">info@agrotikos.com</a>
-        <a href="tel:+573002089320">+57 300 208 9320</a>
-        <span>Colombia · 2026</span>
+
+      <div class="founders-contact__grid">
+        <article class="founder-card reveal">
+          <span class="founder-card__eyebrow">CO-FUNDADOR · TECNOLOGÍA</span>
+          <h3>Oscar Jiménez</h3>
+          <p>Ingeniería, IoT, datos, automatización y desarrollo de la plataforma DIMITRA.</p>
+          <div class="founder-card__links">
+            <a href="mailto:info@agrotikos.com">info@agrotikos.com</a>
+            <a href="tel:+573002089320">+57 300 208 9320</a>
+          </div>
+        </article>
+
+        <article class="founder-card founder-card--company reveal">
+          <span class="founder-card__eyebrow">AGROTIKOS · COLOMBIA</span>
+          <h3>Hablemos con el equipo fundador.</h3>
+          <p>Productores, fincas, invernaderos, sistemas pecuarios y operaciones acuícolas: evaluamos contigo dónde los datos pueden generar valor real.</p>
+          <a class="btn btn--primary magnetic" href="mailto:info@agrotikos.com">Iniciar conversación <span>↘</span></a>
+        </article>
+      </div>
+
+      <div class="founders-contact__meta">
+        <span>Colombia · LatAm</span>
+        <span>AgroTikos · DIMITRA</span>
+        <span>IoT · Datos · Automatización · IA</span>
       </div>
     </div>
   </section>
