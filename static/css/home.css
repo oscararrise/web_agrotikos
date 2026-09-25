@@ -1328,7 +1328,7 @@
   font-size:clamp(2.7rem,5.4vw,6.2rem);line-height:.94;letter-spacing:-.055em;font-weight:570
 }
 .founders-contact__intro p{max-width:760px;color:#879a90;line-height:1.75;font-size:1rem}
-.founders-contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:55px}
+.founders-contact__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:55px}
 .founder-card{
   min-height:300px;padding:34px;border:1px solid rgba(255,255,255,.08);
   background:linear-gradient(145deg,rgba(16,34,23,.82),rgba(7,17,12,.88));
@@ -1336,25 +1336,37 @@
 }
 .founder-card--company{background:linear-gradient(145deg,rgba(13,36,31,.82),rgba(7,17,12,.88))}
 .founder-card__eyebrow{font-size:.52rem;letter-spacing:.14em;color:#8fdc3d}
-.founder-card h3{margin:18px 0 12px;font-size:clamp(1.8rem,3vw,3rem);letter-spacing:-.04em}
+.founder-card h3{margin:18px 0 12px;font-size:clamp(1.5rem,2.1vw,2.35rem);line-height:1.04;letter-spacing:-.04em}
 .founder-card p{max-width:560px;color:#83958c;line-height:1.7;margin:0 0 28px}
 .founder-card__links{display:grid;gap:8px;margin-top:auto}
 .founder-card__links a{color:#c6d5cc;font-size:.82rem}
 .founder-card__links a:hover{color:#8fdc3d}
 .founder-card .btn{margin-top:auto}
+.founders-contact__actions{
+  margin-top:22px;padding:24px 0;border-top:1px solid rgba(255,255,255,.07);
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap
+}
+.founders-contact__actions>a:not(.btn){color:#c5d3cb;font-size:.78rem}
+.founders-contact__actions>a:not(.btn):hover{color:#8fdc3d}
+.founders-contact__actions .btn{margin-left:auto}
 .founders-contact__meta{
-  margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);
+  margin-top:0;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);
   display:flex;gap:18px;flex-wrap:wrap;color:#596e63;font-size:.55rem;letter-spacing:.1em
 }
 
+@media (max-width:1100px){
+  .founders-contact__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media (max-width:900px){
   .platform-module{display:none}
-  .founders-contact__grid{grid-template-columns:1fr}
+  .founders-contact__actions .btn{margin-left:0}
   .pond-level-card,.pond-flow-card{display:none}
   .herd-status{right:18px;bottom:18px}
 }
 @media (max-width:600px){
   .founders-contact{padding:80px 22px 70px}
+  .founders-contact__grid{grid-template-columns:1fr}
+  .founder-card{min-height:0}
   .water-saving-card{left:18px;bottom:18px;width:160px}
   .herd-status{display:none}
 }
