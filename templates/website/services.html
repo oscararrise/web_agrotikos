@@ -83,12 +83,27 @@
         <svg class="livestock-map" viewBox="0 0 900 660" aria-hidden="true">
           <defs>
             <g id="cow-marker">
-              <ellipse class="animal-body" cx="0" cy="0" rx="24" ry="13"/>
-              <circle class="animal-head" cx="28" cy="-4" r="8"/>
-              <path class="animal-leg" d="M-14 9v18M8 10v18M22 5v17"/>
-              <path class="animal-horn" d="M30 -11l6 -5M26 -11l-4 -6"/>
-              <circle class="animal-signal-dot" cx="0" cy="-31" r="4"/>
-              <circle class="animal-signal-ring" cx="0" cy="-31" r="12"/>
+              <ellipse class="cow-body" cx="0" cy="0" rx="31" ry="17"/>
+              <ellipse class="cow-chest" cx="17" cy="-1" rx="14" ry="14"/>
+              <ellipse class="cow-head" cx="38" cy="-7" rx="12" ry="10"/>
+              <ellipse class="cow-muzzle" cx="45" cy="-3" rx="7" ry="5"/>
+              <ellipse class="cow-ear cow-ear--left" cx="33" cy="-17" rx="5" ry="3" transform="rotate(-22 33 -17)"/>
+              <ellipse class="cow-ear cow-ear--right" cx="45" cy="-17" rx="5" ry="3" transform="rotate(24 45 -17)"/>
+              <path class="cow-horn" d="M34 -18q-6 -8 -10 -3"/>
+              <path class="cow-horn" d="M44 -18q6 -8 10 -3"/>
+              <path class="cow-leg" d="M-18 12v24M-4 13v23M14 12v24M25 9v27"/>
+              <path class="cow-hoof" d="M-22 36h8M-8 36h8M10 36h8M21 36h8"/>
+              <path class="cow-tail" d="M-29 -4q-10 4 -12 16q0 7 -5 10"/>
+              <circle class="cow-eye" cx="42" cy="-9" r="1.5"/>
+              <circle class="cow-nostril" cx="47" cy="-3" r="1"/>
+              <circle class="cow-nostril" cx="42" cy="-2" r="1"/>
+              <path class="cow-spot cow-spot--1" d="M-17 -10q12 -7 22 1q-3 13 -16 13q-9 -4 -6 -14z"/>
+              <path class="cow-spot cow-spot--2" d="M8 0q11 -7 18 1q-2 10 -12 11q-9 -2 -6 -12z"/>
+              <path class="cow-spot cow-spot--3" d="M-23 4q8 -4 12 3q-2 8 -10 8q-5 -4 -2 -11z"/>
+              <rect class="cow-collar" x="25" y="-4" width="9" height="5" rx="2.5"/>
+              <circle class="cow-tag" cx="29.5" cy="3.5" r="2.5"/>
+              <circle class="animal-signal-dot" cx="0" cy="-39" r="4"/>
+              <circle class="animal-signal-ring" cx="0" cy="-39" r="12"/>
             </g>
             <g id="sheep-marker">
               <path class="sheep-body" d="M-19 2c0-11 9-18 20-18s20 7 20 18-9 17-20 17-20-6-20-17z"/>
@@ -161,11 +176,37 @@
         <div class="fish fish--3" aria-hidden="true"></div>
         <div class="fish fish--4" aria-hidden="true"></div>
 
+        <div class="friendly-fish ff1" aria-hidden="true"><i></i></div>
+        <div class="friendly-fish ff2" aria-hidden="true"><i></i></div>
+        <div class="friendly-fish ff3" aria-hidden="true"><i></i></div>
+        <div class="friendly-fish ff4" aria-hidden="true"><i></i></div>
+        <div class="friendly-fish ff5" aria-hidden="true"><i></i></div>
+
+        <div class="pond-plant pp1" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="pond-plant pp2" aria-hidden="true"><i></i><i></i></div>
+
+        <div class="pond-bubbles pb1" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="pond-bubbles pb2" aria-hidden="true"><i></i><i></i></div>
+
+        <div class="smart-water-loop" aria-label="Ciclo visual de optimización de agua">
+          <div><span>01</span><strong>MEDIR</strong><small>nivel · caudal · calidad</small></div>
+          <b>→</b>
+          <div><span>02</span><strong>DECIDIR</strong><small>reglas · alertas · modelos</small></div>
+          <b>→</b>
+          <div><span>03</span><strong>AHORRAR</strong><small>menos pérdidas · mejor uso</small></div>
+        </div>
+
         <div class="water-saving-card">
-          <small>EFICIENCIA HÍDRICA</small>
+          <small>AHORRO DE AGUA</small>
           <strong>28%</strong>
-          <span>menos agua vs. línea base</span>
+          <span>menos consumo frente a la línea base</span>
           <div><i style="width:72%"></i></div>
+        </div>
+
+        <div class="pond-biomass-card">
+          <small>BIOMASA</small>
+          <strong>1.24 t</strong>
+          <span>alimentación ajustada al cultivo</span>
         </div>
 
         <div class="pond-level-card">
